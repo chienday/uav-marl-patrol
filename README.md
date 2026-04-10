@@ -44,17 +44,6 @@ Môi trường được xây dựng dưới dạng **lưới 2D 10×10**, mỗi 
 | **Mixed Map** | 10×10 | 7 ô | 93 | 800 | Tạo nhiều hành lang phức tạp |
 | **Bottleneck Map** | 10×10 | 9 ô | 91 | 1000 | Hàng rào row 5, chỉ 1 ô thông tại [5,4] |
 
-```
-Simple Map          Mixed Map           Bottleneck Map
-. . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
-. . . . . . . . . . . . . . . # . . . . . . . . . . . . . .
-. . . # # . . . . . . . . . . # . . . . . . . . . . . . . .
-. . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
-. . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
-. . . . . . . . . . # # . . . . # # # # . # # # # # # # # #
-. . . # # . . . . . # . . . . . . . . . . . . . . . . . . .
-. . . . . . . . . . # # . . . . . . . . . . . . . . . . . .
-```
 
 ### State Space (305 chiều — IPPO 2 UAV)
 
@@ -169,18 +158,17 @@ pip install stable-baselines3[extra] gymnasium matplotlib numpy
 ```
 
 ### Chạy PPO đơn tác tử
-
+Link kaggle thực tế : https://www.kaggle.com/code/chienday/uav-rl-final
 ```bash
 # Trên Kaggle (có GPU T4/P100):
 # Mở notebooks/uav-rl-final.ipynb → Run All
-# Link kaggle thực tế : https://www.kaggle.com/code/chienday/uav-rl-final
 
 # Local (CPU):
 jupyter notebook notebooks/uav-rl-final.ipynb
 ```
 
-### Chạy IPPO 2 UAV
-### Chạy MAPPO và VDPPO
+### Chạy IPPO 2 UAV *(đang phát triển)*
+### Chạy MAPPO và VDPPO *(đang phát triển)*
 
 
 
@@ -208,10 +196,10 @@ Bản đồ được định nghĩa dưới dạng JSON, dễ chỉnh sửa:
 
 ## Model đã huấn luyện
 
-| Model | Thuật toán | Steps | Coverage TB | Download |
-|-------|-----------|-------|------------|---------|
-| `ppo_uav_v3.zip` | PPO đơn | 10M | 96.7% | [Kaggle Output] |
-| `best_model.zip` | PPO đơn (best) | ~7M | ~97% | [Kaggle Output] |
+| Model | Thuật toán | Steps | Coverage TB |
+|-------|-----------|-------|------------|
+| `ppo_uav_v3.zip` | PPO đơn | 10M | 96.7% |
+| `best_model.zip` | PPO đơn (best) | ~7M | ~97% | 
 
 
 ---
