@@ -197,7 +197,7 @@ Bản đồ được định nghĩa dưới dạng JSON, dễ chỉnh sửa:
 ## Model đã huấn luyện
 
 | Model | Thuật toán | Steps | Coverage TB |
-|-------|-----------|-------|------------|---------|
+|-------|-----------|-------|------------|
 | `ppo_uav_v3.zip` | PPO đơn | 10M | 96.7% |
 | `best_model.zip` | PPO đơn (best) | ~7M | ~97% | 
 
