@@ -173,7 +173,7 @@ pip install stable-baselines3[extra] gymnasium matplotlib numpy
 ```bash
 # Trên Kaggle (có GPU T4/P100):
 # Mở notebooks/uav-rl-final.ipynb → Run All
-# Link kaggle thực tế : https://www.kaggle.com/code/chienday/uav-rl-final
+Link kaggle thực tế : https://www.kaggle.com/code/chienday/uav-rl-final
 
 # Local (CPU):
 jupyter notebook notebooks/uav-rl-final.ipynb
