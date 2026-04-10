@@ -1,0 +1,47 @@
+# ========== Python ==========
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+*.egg
+*.egg-info/
+dist/
+build/
+.Python
+pip-log.txt
+pip-delete-this-directory.txt
+
+# ========== Environment ==========
+venv/
+env/
+ENV/
+.venv
+
+# ========== IDE ==========
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+.project
+.pydevproject
+
+# ========== Jupyter Notebook ==========
+.ipynb_checkpoints
+*.ipynb
+
+# ========== Project-Specific ==========
+checkpoints/
+results/
+*.zip
+*.pkl
+*.pth
+logs/
+outputs/
+**/wandb/
+*.pdf
+
+# ========== OS ==========
+.DS_Store
+Thumbs.db

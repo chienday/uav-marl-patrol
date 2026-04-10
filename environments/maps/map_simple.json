@@ -1,0 +1,12 @@
+{
+  "name": "simple_grid",
+  "grid_size": 10,
+  "obstacles": [
+    [3, 3],
+    [3, 4],
+    [6, 6],
+    [6, 7]
+  ],
+  "start_position": [0, 0],
+  "max_steps": 600
+}
