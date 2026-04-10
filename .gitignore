@@ -32,11 +32,6 @@ ENV/
 *.ipynb
 
 # ========== Project-Specific ==========
-checkpoints/
-results/
-*.zip
-*.pkl
-*.pth
 logs/
 outputs/
 **/wandb/

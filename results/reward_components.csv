@@ -1,0 +1,11 @@
+Reward_Component,Value,Map,Example_Formula,Notes
+EXPLORE_REWARD,60.0,All,+60 when visiting new cell,Encourages coverage
+OBSTACLE_PENALTY,-20.0,All,-20 when hitting wall,Guides away from obstacles
+COVERAGE_SCALE,25.0,All,+25 * (total_coverage / free_cells),Proportional to coverage
+FRONTIER_SCALE,12.0,All,+12 * num_frontier_cells,Guides to boundary
+REVISIT_MULT,1.5,All,-min(count^1.5 * 1.5, 25),Penalty increases with revisits
+BFS_SCALE,8.0,All,+8 / (distance_to_frontier + 1),Long-term planning
+PASSAGE_BONUS,80.0,All (+Bottleneck),+80 per new passage,Encourages bottleneck transit
+STEP_PENALTY,-0.1,All,-0.1 per step,Efficiency
+COMPLETE_BONUS,3000.0,All,+3000 if coverage >= 97%,Completion bonus
+PARTIAL_SCALE,600.0,All,+600 * coverage_ratio at end,Partial completion bonus

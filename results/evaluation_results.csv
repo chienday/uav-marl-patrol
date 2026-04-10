@@ -1,0 +1,5 @@
+Map,Mean_Coverage_%,Std_Coverage_%,Min_Coverage_%,Max_Coverage_%,Success_Rate_%,Mean_Steps,Mean_Reward,Episodes
+Simple,98.5,1.2,96.1,100.0,100,345,8502,20
+Mixed,94.2,2.8,89.3,98.1,85,412,7821,20
+Bottleneck,91.3,3.5,85.2,97.9,75,487,6234,20
+Average,94.7,2.5,90.2,98.7,87,415,7519,60

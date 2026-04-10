@@ -1,0 +1,3 @@
+Algorithm,Num_UAVs,Coverage_simple_%,Coverage_mixed_%,Coverage_bottleneck_%,Avg_Coverage_%,Training_Timesteps,Status,Notes
+PPO,1,98.5,94.2,91.3,94.7,10000000,COMPLETE,Phase 1 - Single agent trained
+Random,1,23.1,18.7,15.2,19.0,0,BASELINE,Random policy baseline for comparison

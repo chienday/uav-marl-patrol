@@ -1,0 +1,14 @@
+Hyperparameter,Value,Type,Description,Impact
+learning_rate,0.0002,float,Actor learning rate,High - Critical tuning
+gamma,0.995,float,Discount factor (0.99,0.999),Medium - Affects long-term planning
+gae_lambda,0.95,float,GAE lambda parameter,Low - Variance reduction
+n_steps,2048,int,Num steps before update,High - Memory vs frequency tradeoff
+batch_size,256,int,Training batch size,Medium - Convergence speed
+n_epochs,10,int,Epochs per policy update,Medium - Training efficiency
+ent_coef,0.04,float,Entropy coefficient (explore),High - Balance exploration vs exploitation
+clip_range,0.2,float,PPO clip range,Medium - Policy update constraint
+net_arch,"[512, 256, 128]",list,Network hidden layers,Medium - Function approximation capacity
+normalize_reward,True,bool,Reward normalization,High - Training stability
+device,cuda,string,Training device (cuda/cpu),Very High - Training speed (10x)
+num_envs,8,int,Parallel environments,High - Sample efficiency
+seed,42,int,Random seed,Low - Reproducibility only

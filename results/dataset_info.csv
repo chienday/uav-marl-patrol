@@ -1,0 +1,4 @@
+Map_Name,Grid_Size,Num_Obstacles,Density_%,Obstacles_Position,Max_Steps,Difficulty,Description
+Simple,10,4,4.0,"(3,3), (3,4), (6,6), (6,7)",600,Easy,Scattered obstacles - simple exploration
+Mixed,10,7,7.0,"(2,5), (3,5), (4,5), (5,2), (6,2), (7,2), (7,3)",600,Medium,Clustered obstacles with some patterns
+Bottleneck,10,9,9.0,"(5,0), (5,1), (5,2), (5,3), (5,5), (5,6), (5,7), (5,8), (5,9)",800,Hard,Bottleneck constraint - single passage at (5,4)
