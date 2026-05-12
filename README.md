@@ -331,7 +331,7 @@ pip install -r requirements.txt
 | VDPPO | https://www.kaggle.com/code/chienday/vdppo-final |
 
 ### Chạy cục bộ (sử dụng module src)
-
+Tạo file mới ví dụ 
 ```python
 from src.envs import UAVPatrolEnvIPPO, RewardConfig, VDPPORewardConfig
 from src.agents import MAPPOTrainer, VDPPOTrainer
