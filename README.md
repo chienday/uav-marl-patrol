@@ -245,7 +245,7 @@ Tiến triển qua các vòng (coverage phối hợp):
 ## Cấu trúc thư mục
 
 ```
-uav_marl_patrol_final/
+uav_marl_patrol/
 │
 ├── notebooks/                      # Sổ tay Jupyter (Kaggle)
 │   ├── ppo-final.ipynb             # PPO đơn tác tử (baseline)
