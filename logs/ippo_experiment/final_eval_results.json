@@ -1,0 +1,20 @@
+{
+  "simple": {
+    "simple": 75.8,
+    "mixed": 62.4,
+    "bottleneck": 74.5,
+    "mean": 70.9
+  },
+  "mixed": {
+    "simple": 75.1,
+    "mixed": 65.6,
+    "bottleneck": 67.4,
+    "mean": 69.4
+  },
+  "bottleneck": {
+    "simple": 68.5,
+    "mixed": 55.7,
+    "bottleneck": 67.5,
+    "mean": 63.9
+  }
+}

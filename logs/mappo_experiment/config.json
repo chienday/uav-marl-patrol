@@ -1,0 +1,41 @@
+{
+  "timestamp": "2026-05-11T18:17:56.471829",
+  "MASTER_SEED": 42,
+  "DEVICE": "cpu",
+  "BACKUP_DIR": "/kaggle/working/checkpoints_mappo",
+  "MAP_PATHS": {
+    "simple": "/kaggle/working/maps/map_simple.json",
+    "mixed": "/kaggle/working/maps/map_mixed.json",
+    "bottleneck": "/kaggle/working/maps/map_bottleneck.json"
+  },
+  "RewardConfig": {
+    "EXPLORE_REWARD": 5.0,
+    "OBSTACLE_PENALTY": 2.0,
+    "COVERAGE_SCALE": 3.0,
+    "FRONTIER_SCALE": 1.5,
+    "REVISIT_MULT": 0.5,
+    "REVISIT_CAP": 5.0,
+    "BFS_SCALE": 1.0,
+    "STEP_PENALTY": 0.05,
+    "COMPLETE_BONUS": 100.0,
+    "PARTIAL_SCALE": 20.0,
+    "PASSAGE_BONUS": 3.0,
+    "COLLISION_PENALTY": 3.0,
+    "OVERLAP_PENALTY": 1.0,
+    "TEAM_ALPHA": 2.0
+  },
+  "trainer_kwargs": {
+    "n_envs": 8,
+    "n_steps": null,
+    "n_updates": null,
+    "gamma": 0.99,
+    "gae_lambda": 0.95,
+    "clip_eps": null,
+    "lr": null,
+    "n_epochs": 4,
+    "batch_size": null,
+    "ent_coef": 0.001,
+    "vf_coef": null,
+    "max_grad_norm": 0.5
+  }
+}

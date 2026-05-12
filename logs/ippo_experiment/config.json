@@ -1,0 +1,13 @@
+{
+  "map_file": "/kaggle/working/maps/map_bottleneck.json",
+  "train_steps_per_round": 2000000,
+  "n_rounds": 3,
+  "n_envs": 4,
+  "seed": 42,
+  "timestamp": "20260511_215132",
+  "map_paths": {
+    "simple": "/kaggle/working/maps/map_simple.json",
+    "mixed": "/kaggle/working/maps/map_mixed.json",
+    "bottleneck": "/kaggle/working/maps/map_bottleneck.json"
+  }
+}

@@ -1,0 +1,65 @@
+[
+  {
+    "round": 1,
+    "agent0": {
+      "simple": 89.8,
+      "mixed": 91.4,
+      "bottleneck": 85.7,
+      "mean": 89.0
+    },
+    "agent1": {
+      "simple": 86.7,
+      "mixed": 88.1,
+      "bottleneck": 91.1,
+      "mean": 88.6
+    },
+    "joint": {
+      "simple": 59.7,
+      "mixed": 49.3,
+      "bottleneck": 62.8,
+      "mean": 57.3
+    }
+  },
+  {
+    "round": 2,
+    "agent0": {
+      "simple": 91.1,
+      "mixed": 83.9,
+      "bottleneck": 94.2,
+      "mean": 89.7
+    },
+    "agent1": {
+      "simple": 92.3,
+      "mixed": 86.6,
+      "bottleneck": 96.9,
+      "mean": 91.9
+    },
+    "joint": {
+      "simple": 55.5,
+      "mixed": 51.5,
+      "bottleneck": 66.2,
+      "mean": 57.7
+    }
+  },
+  {
+    "round": 3,
+    "agent0": {
+      "simple": 91.0,
+      "mixed": 89.6,
+      "bottleneck": 93.5,
+      "mean": 91.4
+    },
+    "agent1": {
+      "simple": 94.2,
+      "mixed": 83.9,
+      "bottleneck": 94.5,
+      "mean": 90.9
+    },
+    "joint": {
+      "simple": 67.3,
+      "mixed": 63.2,
+      "bottleneck": 77.8,
+      "mean": 69.4
+    }
+  }
+]

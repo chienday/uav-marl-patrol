@@ -1,0 +1,3221 @@
+[
+  {
+    "update": 1,
+    "train_joint_reward": -20927.947021484375,
+    "train_coverage": 97.61904761904762,
+    "train_overlap": 13.0,
+    "train_entropy": 1.3862898349761963,
+    "eval": {
+      "simple": {
+        "joint_reward": -71384.13548333218,
+        "coverage": 11.612903594970703,
+        "overlap": 315.6,
+        "entropy": 1.3832033995389938
+      },
+      "mixed": {
+        "joint_reward": -54312.85714089546,
+        "coverage": 10.714285850524902,
+        "overlap": 0.0,
+        "entropy": 1.3829234245121478
+      },
+      "bottleneck": {
+        "joint_reward": -79601.0428589138,
+        "coverage": 9.7619047164917,
+        "overlap": 197.8,
+        "entropy": 1.382421449995041
+      },
+      "mean": {
+        "joint_reward": -68432.67849438048,
+        "coverage": 10.696364720662435,
+        "overlap": 171.13333333333335,
+        "entropy": 1.382849424682061
+      }
+    },
+    "actor_loss": -0.004399384692078456,
+    "critic_loss": 4.1966384798288345,
+    "entropy": 1.3817201517522335,
+    "ent_coef": 0.0077599999999999995
+  },
+  {
+    "update": 10,
+    "train_joint_reward": -8825.0537109375,
+    "train_coverage": 97.61904761904765,
+    "train_overlap": 4.466666666666667,
+    "train_entropy": 1.3261380672454834,
+    "eval": {
+      "simple": {
+        "joint_reward": -60781.18117749989,
+        "coverage": 30.107528686523438,
+        "overlap": 0.4,
+        "entropy": 1.3650546506643295
+      },
+      "mixed": {
+        "joint_reward": -63444.871431523155,
+        "coverage": 21.904760360717773,
+        "overlap": 0.0,
+        "entropy": 1.3311299417614937
+      },
+      "bottleneck": {
+        "joint_reward": -68134.98095315746,
+        "coverage": 28.809524536132812,
+        "overlap": 0.0,
+        "entropy": 1.2844853919506074
+      },
+      "mean": {
+        "joint_reward": -64120.344520726845,
+        "coverage": 26.94060452779134,
+        "overlap": 0.13333333333333333,
+        "entropy": 1.3268899947921435
+      }
+    },
+    "actor_loss": -0.010193629539571702,
+    "critic_loss": 0.5668824939057231,
+    "entropy": 1.3275476060807705,
+    "ent_coef": 0.005899393015159424
+  },
+  {
+    "update": 20,
+    "train_joint_reward": -3045.153903808594,
+    "train_coverage": 97.66666666666669,
+    "train_overlap": 2.56,
+    "train_entropy": 1.149234700202942,
+    "eval": {
+      "simple": {
+        "joint_reward": -50695.6949541049,
+        "coverage": 68.17204284667969,
+        "overlap": 0.8,
+        "entropy": 1.213187617689371
+      },
+      "mixed": {
+        "joint_reward": -62377.42859076656,
+        "coverage": 62.619041442871094,
+        "overlap": 198.4,
+        "entropy": 1.2182545074224473
+      },
+      "bottleneck": {
+        "joint_reward": -67994.40333188596,
+        "coverage": 49.28571701049805,
+        "overlap": 0.0,
+        "entropy": 1.096794593268633
+      },
+      "mean": {
+        "joint_reward": -60355.84229225247,
+        "coverage": 60.02560043334961,
+        "overlap": 66.4,
+        "entropy": 1.176078906126817
+      }
+    },
+    "actor_loss": -0.008763334808463696,
+    "critic_loss": 0.2859071693383157,
+    "entropy": 1.1207153052091599,
+    "ent_coef": 0.004350354743413975
+  },
+  {
+    "update": 30,
+    "train_joint_reward": -785.4280250950864,
+    "train_coverage": 97.65037593984964,
+    "train_overlap": 3.6842105263157894,
+    "train_entropy": 0.8946962685961473,
+    "eval": {
+      "simple": {
+        "joint_reward": -20007.086769540587,
+        "coverage": 95.26881408691406,
+        "overlap": 13.0,
+        "entropy": 1.055571552908478
+      },
+      "mixed": {
+        "joint_reward": -10587.437874146319,
+        "coverage": 97.38095092773438,
+        "overlap": 7.0,
+        "entropy": 0.9018490110907201
+      },
+      "bottleneck": {
+        "joint_reward": -54145.14095110264,
+        "coverage": 66.9047622680664,
+        "overlap": 0.0,
+        "entropy": 1.0451212203687539
+      },
+      "mean": {
+        "joint_reward": -28246.555198263184,
+        "coverage": 86.51817576090495,
+        "overlap": 6.666666666666667,
+        "entropy": 1.000847261455984
+      }
+    },
+    "actor_loss": -0.009844737171079032,
+    "critic_loss": 0.10413016751408577,
+    "entropy": 0.871246200054884,
+    "ent_coef": 0.0032080565483452593
+  },
+  {
+    "update": 40,
+    "train_joint_reward": 71.1240151587953,
+    "train_coverage": 97.64437689969606,
+    "train_overlap": 2.3404255319148937,
+    "train_entropy": 0.7417302943290548,
+    "eval": {
+      "simple": {
+        "joint_reward": -42524.1603858579,
+        "coverage": 85.3763427734375,
+        "overlap": 69.0,
+        "entropy": 0.9826546641523567
+      },
+      "mixed": {
+        "joint_reward": -408.4486897226364,
+        "coverage": 97.85713958740234,
+        "overlap": 5.4,
+        "entropy": 0.7395221259601364
+      },
+      "bottleneck": {
+        "joint_reward": -52970.08022474705,
+        "coverage": 71.19047546386719,
+        "overlap": 10.8,
+        "entropy": 1.0310957111835481
+      },
+      "mean": {
+        "joint_reward": -31967.563100109197,
+        "coverage": 84.80798594156902,
+        "overlap": 28.400000000000002,
+        "entropy": 0.9177575004320137
+      }
+    },
+    "actor_loss": -0.00868540839292109,
+    "critic_loss": 0.0579791939817369,
+    "entropy": 0.7095691841095686,
+    "ent_coef": 0.003
+  },
+  {
+    "update": 50,
+    "train_joint_reward": 247.7437818995062,
+    "train_coverage": 97.64150943396227,
+    "train_overlap": 3.056603773584906,
+    "train_entropy": 0.5977202940661952,
+    "eval": {
+      "simple": {
+        "joint_reward": -22687.56370302053,
+        "coverage": 94.6236572265625,
+        "overlap": 1.0,
+        "entropy": 0.9027449859643166
+      },
+      "mixed": {
+        "joint_reward": 914.959619425819,
+        "coverage": 97.6190414428711,
+        "overlap": 4.2,
+        "entropy": 0.4484596836941514
+      },
+      "bottleneck": {
+        "joint_reward": -60092.78023256718,
+        "coverage": 65.71427917480469,
+        "overlap": 195.6,
+        "entropy": 0.8756566874494114
+      },
+      "mean": {
+        "joint_reward": -27288.461438720627,
+        "coverage": 85.98565928141277,
+        "overlap": 66.93333333333332,
+        "entropy": 0.7422871190359599
+      }
+    },
+    "actor_loss": -0.007195750018581748,
+    "critic_loss": 0.07198897784110159,
+    "entropy": 0.5804044213145971,
+    "ent_coef": 0.003
+  },
+  {
+    "update": 60,
+    "train_joint_reward": 569.0432993570963,
+    "train_coverage": 97.63888888888889,
+    "train_overlap": 1.95,
+    "train_entropy": 0.5291561931371689,
+    "eval": {
+      "simple": {
+        "joint_reward": -10271.378795549845,
+        "coverage": 95.91397857666016,
+        "overlap": 9.4,
+        "entropy": 0.7394719683012357
+      },
+      "mixed": {
+        "joint_reward": 952.524890228756,
+        "coverage": 97.6190414428711,
+        "overlap": 0.4,
+        "entropy": 0.4774877155473714
+      },
+      "bottleneck": {
+        "joint_reward": -40036.20853813183,
+        "coverage": 86.19047546386719,
+        "overlap": 0.0,
+        "entropy": 0.9204801290400442
+      },
+      "mean": {
+        "joint_reward": -16451.687481150973,
+        "coverage": 93.24116516113281,
+        "overlap": 3.266666666666667,
+        "entropy": 0.7124799376295504
+      }
+    },
+    "actor_loss": -0.009386801408254541,
+    "critic_loss": 0.04556645965203643,
+    "entropy": 0.5102950949221849,
+    "ent_coef": 0.003
+  },
+  {
+    "update": 70,
+    "train_joint_reward": 471.57351619914425,
+    "train_coverage": 97.6594027441485,
+    "train_overlap": 2.457627118644068,
+    "train_entropy": 0.5467847186630055,
+    "eval": {
+      "simple": {
+        "joint_reward": -10767.039182470304,
+        "coverage": 96.34408569335938,
+        "overlap": 3.2,
+        "entropy": 0.7267080115148804
+      },
+      "mixed": {
+        "joint_reward": 884.2189681616285,
+        "coverage": 97.6190414428711,
+        "overlap": 2.4,
+        "entropy": 0.4707954493830435
+      },
+      "bottleneck": {
+        "joint_reward": -47619.86330214613,
+        "coverage": 90.23809814453125,
+        "overlap": 1.8,
+        "entropy": 0.956309939982777
+      },
+      "mean": {
+        "joint_reward": -19167.5611721516,
+        "coverage": 94.7337417602539,
+        "overlap": 2.4666666666666663,
+        "entropy": 0.717937800293567
+      }
+    },
+    "actor_loss": -0.012143206055043265,
+    "critic_loss": 0.062022372731007636,
+    "entropy": 0.5309756994247437,
+    "ent_coef": 0.003
+  },
+  {
+    "update": 80,
+    "train_joint_reward": 482.774226461138,
+    "train_coverage": 97.68282312925169,
+    "train_overlap": 2.375,
+    "train_entropy": 0.4869034231773445,
+    "eval": {
+      "simple": {
+        "joint_reward": -48126.520937224675,
+        "coverage": 82.36558532714844,
+        "overlap": 3.0,
+        "entropy": 0.8431484894665454
+      },
+      "mixed": {
+        "joint_reward": 925.1696818681746,
+        "coverage": 97.6190414428711,
+        "overlap": 0.2,
+        "entropy": 0.45060498666606164
+      },
+      "bottleneck": {
+        "joint_reward": -21237.60898326588,
+        "coverage": 97.14286041259766,
+        "overlap": 11.8,
+        "entropy": 0.8726559960516267
+      },
+      "mean": {
+        "joint_reward": -22812.98674620746,
+        "coverage": 92.37582906087239,
+        "overlap": 5.0,
+        "entropy": 0.722136490728078
+      }
+    },
+    "actor_loss": -0.008579353539971635,
+    "critic_loss": 0.08087101951241493,
+    "entropy": 0.4891460221260786,
+    "ent_coef": 0.003
+  },
+  {
+    "update": 90,
+    "train_joint_reward": 544.5179229994951,
+    "train_coverage": 97.69975786924938,
+    "train_overlap": 2.1186440677966103,
+    "train_entropy": 0.4603608240515499,
+    "eval": {
+      "simple": {
+        "joint_reward": -9428.82322509463,
+        "coverage": 96.12903594970703,
+        "overlap": 3.6,
+        "entropy": 0.6376951954957567
+      },
+      "mixed": {
+        "joint_reward": 786.7863067656114,
+        "coverage": 97.85713958740234,
+        "overlap": 2.0,
+        "entropy": 0.420235544920286
+      },
+      "bottleneck": {
+        "joint_reward": -14993.432424085302,
+        "coverage": 90.95237731933594,
+        "overlap": 1.0,
+        "entropy": 0.7189746121358548
+      },
+      "mean": {
+        "joint_reward": -7878.489780804773,
+        "coverage": 94.97951761881511,
+        "overlap": 2.1999999999999997,
+        "entropy": 0.5923017841839658
+      }
+    },
+    "actor_loss": -0.012923741087433882,
+    "critic_loss": 0.0912431301549077,
+    "entropy": 0.4540927931666374,
+    "ent_coef": 0.003
+  },
+  {
+    "update": 100,
+    "train_joint_reward": 495.99164420679995,
+    "train_coverage": 97.66081871345028,
+    "train_overlap": 3.1052631578947367,
+    "train_entropy": 0.4625423302253087,
+    "eval": {
+      "simple": {
+        "joint_reward": -28090.35467541467,
+        "coverage": 83.87096405029297,
+        "overlap": 3.4,
+        "entropy": 0.6141327605131506
+      },
+      "mixed": {
+        "joint_reward": -263.8279920944059,
+        "coverage": 97.6190414428711,
+        "overlap": 4.8,
+        "entropy": 0.456866923304312
+      },
+      "bottleneck": {
+        "joint_reward": -2072.2785128988758,
+        "coverage": 97.6190414428711,
+        "overlap": 4.6,
+        "entropy": 0.5977172375246519
+      },
+      "mean": {
+        "joint_reward": -10142.15372680265,
+        "coverage": 93.03634897867839,
+        "overlap": 4.266666666666667,
+        "entropy": 0.5562389737807049
+      }
+    },
+    "actor_loss": -0.008476354727463331,
+    "critic_loss": 0.06870719022117555,
+    "entropy": 0.4587647197768092,
+    "ent_coef": 0.003
+  },
+  {
+    "update": 110,
+    "train_joint_reward": 659.2225590367472,
+    "train_coverage": 97.67665130568356,
+    "train_overlap": 1.6129032258064515,
+    "train_entropy": 0.4358289921956678,
+    "eval": {
+      "simple": {
+        "joint_reward": -23245.086730430514,
+        "coverage": 84.30107116699219,
+        "overlap": 2.8,
+        "entropy": 0.6723497050289248
+      },
+      "mixed": {
+        "joint_reward": 922.7081713158743,
+        "coverage": 97.85713195800781,
+        "overlap": 2.2,
+        "entropy": 0.40124795524683615
+      },
+      "bottleneck": {
+        "joint_reward": -12555.759480172243,
+        "coverage": 91.9047622680664,
+        "overlap": 0.4,
+        "entropy": 0.5816050161009783
+      },
+      "mean": {
+        "joint_reward": -11626.046013095627,
+        "coverage": 91.3543217976888,
+        "overlap": 1.8,
+        "entropy": 0.551734225458913
+      }
+    },
+    "actor_loss": -0.006761645330698229,
+    "critic_loss": 0.0553741545882076,
+    "entropy": 0.42445478681474924,
+    "ent_coef": 0.003
+  },
+  {
+    "update": 120,
+    "train_joint_reward": 543.5959401365186,
+    "train_coverage": 97.65807962529274,
+    "train_overlap": 1.3114754098360655,
+    "train_entropy": 0.43442981824523114,
+    "eval": {
+      "simple": {
+        "joint_reward": -34921.809777009985,
+        "coverage": 84.51612854003906,
+        "overlap": 0.8,
+        "entropy": 0.6724701978322329
+      },
+      "mixed": {
+        "joint_reward": 907.048246921707,
+        "coverage": 97.85713958740234,
+        "overlap": 1.6,
+        "entropy": 0.3922114813122749
+      },
+      "bottleneck": {
+        "joint_reward": -13120.240083308465,
+        "coverage": 97.14286041259766,
+        "overlap": 1.2,
+        "entropy": 0.702502644999069
+      },
+      "mean": {
+        "joint_reward": -15711.66720446558,
+        "coverage": 93.17204284667969,
+        "overlap": 1.2000000000000002,
+        "entropy": 0.5890614413811923
+      }
+    },
+    "actor_loss": -0.01597463733924087,
+    "critic_loss": 0.14661609544418752,
+    "entropy": 0.4251787941902876,
+    "ent_coef": 0.003
+  },
+  {
+    "update": 130,
+    "train_joint_reward": 696.0749718802316,
+    "train_coverage": 97.63794406651549,
+    "train_overlap": 2.2857142857142856,
+    "train_entropy": 0.43512969665111056,
+    "eval": {
+      "simple": {
+        "joint_reward": -2315.9303079733586,
+        "coverage": 97.8494644165039,
+        "overlap": 3.4,
+        "entropy": 0.6804860327387345
+      },
+      "mixed": {
+        "joint_reward": -12.295258626740042,
+        "coverage": 97.6190414428711,
+        "overlap": 5.2,
+        "entropy": 0.4236369648581547
+      },
+      "bottleneck": {
+        "joint_reward": -30124.167085853067,
+        "coverage": 90.95237731933594,
+        "overlap": 3.4,
+        "entropy": 0.7819148156769036
+      },
+      "mean": {
+        "joint_reward": -10817.464217484388,
+        "coverage": 95.47362772623698,
+        "overlap": 4.0,
+        "entropy": 0.6286792710912643
+      }
+    },
+    "actor_loss": -0.007135148174711503,
+    "critic_loss": 0.040928934467956424,
+    "entropy": 0.41960753966122866,
+    "ent_coef": 0.003
+  },
+  {
+    "update": 140,
+    "train_joint_reward": 696.1464240550995,
+    "train_coverage": 97.67485119047619,
+    "train_overlap": 1.578125,
+    "train_entropy": 0.43954878207296133,
+    "eval": {
+      "simple": {
+        "joint_reward": -13.984829494454164,
+        "coverage": 97.8494644165039,
+        "overlap": 2.8,
+        "entropy": 0.6457903772421689
+      },
+      "mixed": {
+        "joint_reward": 342.29571055306326,
+        "coverage": 97.85713195800781,
+        "overlap": 8.8,
+        "entropy": 0.40378098902305315
+      },
+      "bottleneck": {
+        "joint_reward": -1535.2391203149034,
+        "coverage": 97.6190414428711,
+        "overlap": 2.2,
+        "entropy": 0.6136016790543242
+      },
+      "mean": {
+        "joint_reward": -402.30941308543146,
+        "coverage": 97.77521260579427,
+        "overlap": 4.6000000000000005,
+        "entropy": 0.5543910151065153
+      }
+    },
+    "actor_loss": -0.007110151906090323,
+    "critic_loss": 0.041980189620517194,
+    "entropy": 0.4208786375820637,
+    "ent_coef": 0.003
+  },
+  {
+    "update": 150,
+    "train_joint_reward": 609.1211048249276,
+    "train_coverage": 97.63824884792626,
+    "train_overlap": 2.4838709677419355,
+    "train_entropy": 0.44524867063568485,
+    "eval": {
+      "simple": {
+        "joint_reward": -292.1265752484757,
+        "coverage": 97.8494644165039,
+        "overlap": 2.4,
+        "entropy": 0.5729006496293516
+      },
+      "mixed": {
+        "joint_reward": 812.676945278531,
+        "coverage": 97.6190414428711,
+        "overlap": 2.2,
+        "entropy": 0.37129398668341274
+      },
+      "bottleneck": {
+        "joint_reward": -985.4843781115269,
+        "coverage": 97.6190414428711,
+        "overlap": 5.0,
+        "entropy": 0.592653234068712
+      },
+      "mean": {
+        "joint_reward": -154.97800269382387,
+        "coverage": 97.6958491007487,
+        "overlap": 3.1999999999999997,
+        "entropy": 0.5122826234604921
+      }
+    },
+    "actor_loss": -0.0062435669169644825,
+    "critic_loss": 0.06655615544877946,
+    "entropy": 0.41739085502922535,
+    "ent_coef": 0.003
+  },
+  {
+    "update": 160,
+    "train_joint_reward": 745.6285693828876,
+    "train_coverage": 97.63736263736263,
+    "train_overlap": 1.8615384615384616,
+    "train_entropy": 0.40460982872889595,
+    "eval": {
+      "simple": {
+        "joint_reward": 189.09264782401453,
+        "coverage": 97.8494644165039,
+        "overlap": 1.4,
+        "entropy": 0.5554786322343299
+      },
+      "mixed": {
+        "joint_reward": 1023.0327183575566,
+        "coverage": 97.6190414428711,
+        "overlap": 0.8,
+        "entropy": 0.3387669701477471
+      },
+      "bottleneck": {
+        "joint_reward": -14948.875691708794,
+        "coverage": 97.14286041259766,
+        "overlap": 0.4,
+        "entropy": 0.7862251501173818
+      },
+      "mean": {
+        "joint_reward": -4578.91677517574,
+        "coverage": 97.53712209065755,
+        "overlap": 0.8666666666666667,
+        "entropy": 0.5601569174998197
+      }
+    },
+    "actor_loss": -0.00794820932787843,
+    "critic_loss": 0.043556075426749885,
+    "entropy": 0.3882607948035002,
+    "ent_coef": 0.003
+  },
+  {
+    "update": 170,
+    "train_joint_reward": 703.7727798954134,
+    "train_coverage": 97.6958525345622,
+    "train_overlap": 1.435483870967742,
+    "train_entropy": 0.4136821209423004,
+    "eval": {
+      "simple": {
+        "joint_reward": 807.8275125042688,
+        "coverage": 97.8494644165039,
+        "overlap": 1.0,
+        "entropy": 0.5080858291665342
+      },
+      "mixed": {
+        "joint_reward": 883.1047473928666,
+        "coverage": 97.85713958740234,
+        "overlap": 3.8,
+        "entropy": 0.36028821922720733
+      },
+      "bottleneck": {
+        "joint_reward": 24.323208484090948,
+        "coverage": 97.85713958740234,
+        "overlap": 4.0,
+        "entropy": 0.4486691526744789
+      },
+      "mean": {
+        "joint_reward": 571.751822793742,
+        "coverage": 97.85458119710286,
+        "overlap": 2.9333333333333336,
+        "entropy": 0.4390144003560735
+      }
+    },
+    "actor_loss": -0.007152971586037893,
+    "critic_loss": 0.0352645423845388,
+    "entropy": 0.39456228725612164,
+    "ent_coef": 0.003
+  },
+  {
+    "update": 180,
+    "train_joint_reward": 545.7838552565802,
+    "train_coverage": 97.67573696145125,
+    "train_overlap": 1.2857142857142858,
+    "train_entropy": 0.41504192707084475,
+    "eval": {
+      "simple": {
+        "joint_reward": -707.047132699848,
+        "coverage": 97.8494644165039,
+        "overlap": 4.6,
+        "entropy": 0.6130696540450695
+      },
+      "mixed": {
+        "joint_reward": -17252.698698497064,
+        "coverage": 95.71427917480469,
+        "overlap": 2.4,
+        "entropy": 0.41225179337094325
+      },
+      "bottleneck": {
+        "joint_reward": 208.22010721600242,
+        "coverage": 97.6190414428711,
+        "overlap": 0.6,
+        "entropy": 0.5032138485693048
+      },
+      "mean": {
+        "joint_reward": -5917.1752413269705,
+        "coverage": 97.06092834472656,
+        "overlap": 2.533333333333333,
+        "entropy": 0.5095117653284392
+      }
+    },
+    "actor_loss": -0.016711821077478817,
+    "critic_loss": 0.3698267010040581,
+    "entropy": 0.4110332280397415,
+    "ent_coef": 0.003
+  },
+  {
+    "update": 190,
+    "train_joint_reward": 670.8209887742996,
+    "train_coverage": 97.6376488095238,
+    "train_overlap": 2.25,
+    "train_entropy": 0.38879223819822073,
+    "eval": {
+      "simple": {
+        "joint_reward": -444.341671305294,
+        "coverage": 97.8494644165039,
+        "overlap": 1.0,
+        "entropy": 0.5575605696217036
+      },
+      "mixed": {
+        "joint_reward": 925.0270049016905,
+        "coverage": 97.85713958740234,
+        "overlap": 3.0,
+        "entropy": 0.3181715349987225
+      },
+      "bottleneck": {
+        "joint_reward": -2088.022884324996,
+        "coverage": 97.6190414428711,
+        "overlap": 4.2,
+        "entropy": 0.5700561143372542
+      },
+      "mean": {
+        "joint_reward": -535.7791835761999,
+        "coverage": 97.77521514892578,
+        "overlap": 2.733333333333333,
+        "entropy": 0.48192940631922676
+      }
+    },
+    "actor_loss": -0.006684834137558937,
+    "critic_loss": 0.06463577307295054,
+    "entropy": 0.38154156133532524,
+    "ent_coef": 0.003
+  },
+  {
+    "update": 200,
+    "train_joint_reward": 612.3451851738823,
+    "train_coverage": 97.713529856387,
+    "train_overlap": 2.1904761904761907,
+    "train_entropy": 0.38720470548622193,
+    "eval": {
+      "simple": {
+        "joint_reward": -12.773677784724168,
+        "coverage": 97.8494644165039,
+        "overlap": 0.8,
+        "entropy": 0.5399714806380516
+      },
+      "mixed": {
+        "joint_reward": 1026.2774808393206,
+        "coverage": 97.6190414428711,
+        "overlap": 1.2,
+        "entropy": 0.29620321474831907
+      },
+      "bottleneck": {
+        "joint_reward": -7323.560512520737,
+        "coverage": 97.6190414428711,
+        "overlap": 5.0,
+        "entropy": 0.5461832530053681
+      },
+      "mean": {
+        "joint_reward": -2103.3522364887135,
+        "coverage": 97.6958491007487,
+        "overlap": 2.3333333333333335,
+        "entropy": 0.46078598279724625
+      }
+    },
+    "actor_loss": -0.006749092095560627,
+    "critic_loss": 0.10139187122695148,
+    "entropy": 0.37824380677193403,
+    "ent_coef": 0.003
+  },
+  {
+    "update": 210,
+    "train_joint_reward": 688.482527838813,
+    "train_coverage": 97.713529856387,
+    "train_overlap": 1.6984126984126984,
+    "train_entropy": 0.420913674765163,
+    "eval": {
+      "simple": {
+        "joint_reward": 706.217717933391,
+        "coverage": 97.8494644165039,
+        "overlap": 3.6,
+        "entropy": 0.48063862010436553
+      },
+      "mixed": {
+        "joint_reward": 892.4607401811509,
+        "coverage": 97.6190414428711,
+        "overlap": 4.2,
+        "entropy": 0.33985130420358034
+      },
+      "bottleneck": {
+        "joint_reward": 375.0765535693698,
+        "coverage": 97.6190414428711,
+        "overlap": 0.6,
+        "entropy": 0.5060543201928749
+      },
+      "mean": {
+        "joint_reward": 657.9183372279705,
+        "coverage": 97.6958491007487,
+        "overlap": 2.8000000000000003,
+        "entropy": 0.4421814148336069
+      }
+    },
+    "actor_loss": -0.007390671751636546,
+    "critic_loss": 0.06846631201915443,
+    "entropy": 0.41033547185361385,
+    "ent_coef": 0.003
+  },
+  {
+    "update": 220,
+    "train_joint_reward": 609.0977182857325,
+    "train_coverage": 97.71662763466041,
+    "train_overlap": 2.3442622950819674,
+    "train_entropy": 0.4296592674294456,
+    "eval": {
+      "simple": {
+        "joint_reward": 948.9896896165419,
+        "coverage": 97.8494644165039,
+        "overlap": 0.6,
+        "entropy": 0.48458574069832433
+      },
+      "mixed": {
+        "joint_reward": 921.1741327449254,
+        "coverage": 97.6190414428711,
+        "overlap": 3.0,
+        "entropy": 0.3726182755914621
+      },
+      "bottleneck": {
+        "joint_reward": -1822.2720224529498,
+        "coverage": 97.6190414428711,
+        "overlap": 8.2,
+        "entropy": 0.6460706344510119
+      },
+      "mean": {
+        "joint_reward": 15.963933302839147,
+        "coverage": 97.6958491007487,
+        "overlap": 3.933333333333333,
+        "entropy": 0.5010915502469327
+      }
+    },
+    "actor_loss": -0.0077829994188505225,
+    "critic_loss": 0.08290547505021095,
+    "entropy": 0.4229122493416071,
+    "ent_coef": 0.003
+  },
+  {
+    "update": 230,
+    "train_joint_reward": 678.1421157836915,
+    "train_coverage": 97.67857142857142,
+    "train_overlap": 1.5833333333333333,
+    "train_entropy": 0.41476399501164757,
+    "eval": {
+      "simple": {
+        "joint_reward": 698.2773927807064,
+        "coverage": 98.06451416015625,
+        "overlap": 1.0,
+        "entropy": 0.501942354042175
+      },
+      "mixed": {
+        "joint_reward": 1034.354177880968,
+        "coverage": 97.6190414428711,
+        "overlap": 2.6,
+        "entropy": 0.26956177402238946
+      },
+      "bottleneck": {
+        "joint_reward": -12883.008741966934,
+        "coverage": 95.0,
+        "overlap": 2.8,
+        "entropy": 0.5925585522946913
+      },
+      "mean": {
+        "joint_reward": -3716.7923904350864,
+        "coverage": 96.89451853434245,
+        "overlap": 2.1333333333333333,
+        "entropy": 0.4546875601197519
+      }
+    },
+    "actor_loss": -0.006309271411737427,
+    "critic_loss": 0.05619144334923476,
+    "entropy": 0.38929204642772675,
+    "ent_coef": 0.003
+  },
+  {
+    "update": 240,
+    "train_joint_reward": 677.586498260498,
+    "train_coverage": 97.61904761904762,
+    "train_overlap": 1.6935483870967742,
+    "train_entropy": 0.4065047353506088,
+    "eval": {
+      "simple": {
+        "joint_reward": 825.3802614084877,
+        "coverage": 97.8494644165039,
+        "overlap": 1.8,
+        "entropy": 0.4707919304114734
+      },
+      "mixed": {
+        "joint_reward": -16942.14464751712,
+        "coverage": 95.47618865966797,
+        "overlap": 0.2,
+        "entropy": 0.3152738642808379
+      },
+      "bottleneck": {
+        "joint_reward": -2018.4335636608346,
+        "coverage": 97.6190414428711,
+        "overlap": 0.0,
+        "entropy": 0.5590761944528094
+      },
+      "mean": {
+        "joint_reward": -6045.06598325649,
+        "coverage": 96.98156483968098,
+        "overlap": 0.6666666666666666,
+        "entropy": 0.4483806630483736
+      }
+    },
+    "actor_loss": -0.006976437492994592,
+    "critic_loss": 0.05784263834357262,
+    "entropy": 0.3837140090763569,
+    "ent_coef": 0.003
+  },
+  {
+    "update": 250,
+    "train_joint_reward": 702.6379492975051,
+    "train_coverage": 97.67665130568356,
+    "train_overlap": 1.7258064516129032,
+    "train_entropy": 0.42060581402432534,
+    "eval": {
+      "simple": {
+        "joint_reward": -2769.9208271556336,
+        "coverage": 97.8494644165039,
+        "overlap": 0.4,
+        "entropy": 0.5747328332309822
+      },
+      "mixed": {
+        "joint_reward": 1004.9203320648558,
+        "coverage": 97.6190414428711,
+        "overlap": 0.8,
+        "entropy": 0.33353281613186175
+      },
+      "bottleneck": {
+        "joint_reward": 272.861776369571,
+        "coverage": 97.6190414428711,
+        "overlap": 1.0,
+        "entropy": 0.47299170752244335
+      },
+      "mean": {
+        "joint_reward": -497.3795729070689,
+        "coverage": 97.6958491007487,
+        "overlap": 0.7333333333333334,
+        "entropy": 0.4604191189617624
+      }
+    },
+    "actor_loss": -0.006340339401504025,
+    "critic_loss": 0.049546525813639164,
+    "entropy": 0.40601630974560976,
+    "ent_coef": 0.003
+  },
+  {
+    "update": 260,
+    "train_joint_reward": 772.051632642746,
+    "train_coverage": 97.67485119047618,
+    "train_overlap": 2.0,
+    "train_entropy": 0.3902999472338706,
+    "eval": {
+      "simple": {
+        "joint_reward": 977.1551981296919,
+        "coverage": 97.8494644165039,
+        "overlap": 0.2,
+        "entropy": 0.48688373061929263
+      },
+      "mixed": {
+        "joint_reward": 1021.8976286642894,
+        "coverage": 97.6190414428711,
+        "overlap": 0.2,
+        "entropy": 0.31355673251490096
+      },
+      "bottleneck": {
+        "joint_reward": 117.0091449619475,
+        "coverage": 97.6190414428711,
+        "overlap": 1.2,
+        "entropy": 0.5173283813259553
+      },
+      "mean": {
+        "joint_reward": 705.3539905853096,
+        "coverage": 97.6958491007487,
+        "overlap": 0.5333333333333333,
+        "entropy": 0.4392562814867163
+      }
+    },
+    "actor_loss": -0.0059732731024269015,
+    "critic_loss": 0.056013318011537194,
+    "entropy": 0.37868746276944876,
+    "ent_coef": 0.003
+  },
+  {
+    "update": 270,
+    "train_joint_reward": 674.048969956695,
+    "train_coverage": 97.63856362217018,
+    "train_overlap": 2.540983606557377,
+    "train_entropy": 0.4063955276715951,
+    "eval": {
+      "simple": {
+        "joint_reward": 1001.0308936615105,
+        "coverage": 97.8494644165039,
+        "overlap": 1.6,
+        "entropy": 0.4453592681260107
+      },
+      "mixed": {
+        "joint_reward": 953.559864390237,
+        "coverage": 97.6190414428711,
+        "overlap": 1.4,
+        "entropy": 0.3545358832609317
+      },
+      "bottleneck": {
+        "joint_reward": -20416.615876077172,
+        "coverage": 93.0952377319336,
+        "overlap": 190.2,
+        "entropy": 0.6168240247401262
+      },
+      "mean": {
+        "joint_reward": -6154.008372675141,
+        "coverage": 96.1879145304362,
+        "overlap": 64.39999999999999,
+        "entropy": 0.47223972537568953
+      }
+    },
+    "actor_loss": -0.00676387960993452,
+    "critic_loss": 0.0642051741015166,
+    "entropy": 0.3919295547530055,
+    "ent_coef": 0.003
+  },
+  {
+    "update": 280,
+    "train_joint_reward": 654.3649771905715,
+    "train_coverage": 97.6958525345622,
+    "train_overlap": 1.935483870967742,
+    "train_entropy": 0.37910514685415453,
+    "eval": {
+      "simple": {
+        "joint_reward": 1058.6718697920883,
+        "coverage": 97.8494644165039,
+        "overlap": 0.6,
+        "entropy": 0.4365788922697818
+      },
+      "mixed": {
+        "joint_reward": -325.1877052649238,
+        "coverage": 97.85713958740234,
+        "overlap": 0.2,
+        "entropy": 0.36395780520828325
+      },
+      "bottleneck": {
+        "joint_reward": -269.28612554308586,
+        "coverage": 97.6190414428711,
+        "overlap": 0.6,
+        "entropy": 0.44708389375935365
+      },
+      "mean": {
+        "joint_reward": 154.73267966135953,
+        "coverage": 97.77521514892578,
+        "overlap": 0.4666666666666666,
+        "entropy": 0.4158735304124728
+      }
+    },
+    "actor_loss": -0.006497337148175575,
+    "critic_loss": 0.09919633413664997,
+    "entropy": 0.37307548709213734,
+    "ent_coef": 0.003
+  },
+  {
+    "update": 290,
+    "train_joint_reward": 783.3290476038836,
+    "train_coverage": 97.65355417529331,
+    "train_overlap": 1.3768115942028984,
+    "train_entropy": 0.37757769788520923,
+    "eval": {
+      "simple": {
+        "joint_reward": 1072.679026671262,
+        "coverage": 97.8494644165039,
+        "overlap": 0.0,
+        "entropy": 0.46008058553527587
+      },
+      "mixed": {
+        "joint_reward": 1013.7769079953148,
+        "coverage": 97.85713958740234,
+        "overlap": 0.4,
+        "entropy": 0.3083397330674054
+      },
+      "bottleneck": {
+        "joint_reward": -12622.70697106002,
+        "coverage": 94.52381134033203,
+        "overlap": 0.4,
+        "entropy": 0.5860779661793788
+      },
+      "mean": {
+        "joint_reward": -3512.083678797815,
+        "coverage": 96.74347178141277,
+        "overlap": 0.26666666666666666,
+        "entropy": 0.45149942826068673
+      }
+    },
+    "actor_loss": -0.00617966772915679,
+    "critic_loss": 0.0414817628916353,
+    "entropy": 0.34634433407336473,
+    "ent_coef": 0.003
+  },
+  {
+    "update": 300,
+    "train_joint_reward": 704.7632426600302,
+    "train_coverage": 97.6958525345622,
+    "train_overlap": 1.4193548387096775,
+    "train_entropy": 0.38537183788514906,
+    "eval": {
+      "simple": {
+        "joint_reward": 804.5470546294653,
+        "coverage": 97.8494644165039,
+        "overlap": 1.8,
+        "entropy": 0.45909972094964635
+      },
+      "mixed": {
+        "joint_reward": 794.3384117326282,
+        "coverage": 97.85713958740234,
+        "overlap": 0.4,
+        "entropy": 0.3081927626201689
+      },
+      "bottleneck": {
+        "joint_reward": 83.93565053818733,
+        "coverage": 97.6190414428711,
+        "overlap": 1.8,
+        "entropy": 0.4897303077725052
+      },
+      "mean": {
+        "joint_reward": 560.9403723000936,
+        "coverage": 97.77521514892578,
+        "overlap": 1.3333333333333333,
+        "entropy": 0.4190075971141068
+      }
+    },
+    "actor_loss": -0.007582037818792742,
+    "critic_loss": 0.09301018877886236,
+    "entropy": 0.37587681598961353,
+    "ent_coef": 0.003
+  },
+  {
+    "update": 310,
+    "train_joint_reward": 756.1718004014757,
+    "train_coverage": 97.67573696145125,
+    "train_overlap": 1.6984126984126984,
+    "train_entropy": 0.37131389715368784,
+    "eval": {
+      "simple": {
+        "joint_reward": -18203.05691585893,
+        "coverage": 86.02149963378906,
+        "overlap": 0.6,
+        "entropy": 0.5413812164186739
+      },
+      "mixed": {
+        "joint_reward": 911.2499173303635,
+        "coverage": 97.6190414428711,
+        "overlap": 0.2,
+        "entropy": 0.28826529647676885
+      },
+      "bottleneck": {
+        "joint_reward": -179.14911393846776,
+        "coverage": 97.6190414428711,
+        "overlap": 2.2,
+        "entropy": 0.49880199781584567
+      },
+      "mean": {
+        "joint_reward": -5823.652037489012,
+        "coverage": 93.75319417317708,
+        "overlap": 1.0,
+        "entropy": 0.4428161702370961
+      }
+    },
+    "actor_loss": -0.006137584612588398,
+    "critic_loss": 0.06254576111678034,
+    "entropy": 0.36042228899896145,
+    "ent_coef": 0.003
+  },
+  {
+    "update": 320,
+    "train_joint_reward": 506.0524220620432,
+    "train_coverage": 97.6958525345622,
+    "train_overlap": 1.3064516129032258,
+    "train_entropy": 0.38741522066054807,
+    "eval": {
+      "simple": {
+        "joint_reward": 657.1239013276123,
+        "coverage": 97.8494644165039,
+        "overlap": 0.4,
+        "entropy": 0.4988774978033147
+      },
+      "mixed": {
+        "joint_reward": 1012.7369835662842,
+        "coverage": 98.0952377319336,
+        "overlap": 0.4,
+        "entropy": 0.2604541509520258
+      },
+      "bottleneck": {
+        "joint_reward": -585.2744997200134,
+        "coverage": 97.6190414428711,
+        "overlap": 4.2,
+        "entropy": 0.5360881101020102
+      },
+      "mean": {
+        "joint_reward": 361.5287950579611,
+        "coverage": 97.85458119710286,
+        "overlap": 1.6666666666666667,
+        "entropy": 0.43180658628578356
+      }
+    },
+    "actor_loss": -0.006927586626261473,
+    "critic_loss": 0.4744263328611851,
+    "entropy": 0.40211223997175694,
+    "ent_coef": 0.003
+  },
+  {
+    "update": 330,
+    "train_joint_reward": 753.024093745305,
+    "train_coverage": 97.63736263736263,
+    "train_overlap": 1.4153846153846155,
+    "train_entropy": 0.3460361810830923,
+    "eval": {
+      "simple": {
+        "joint_reward": 258.98778474630006,
+        "coverage": 97.8494644165039,
+        "overlap": 5.2,
+        "entropy": 0.5105963879080485
+      },
+      "mixed": {
+        "joint_reward": 970.8470033354986,
+        "coverage": 97.6190414428711,
+        "overlap": 2.0,
+        "entropy": 0.2916804069868134
+      },
+      "bottleneck": {
+        "joint_reward": 290.2911183202835,
+        "coverage": 97.6190414428711,
+        "overlap": 0.4,
+        "entropy": 0.46091232617563893
+      },
+      "mean": {
+        "joint_reward": 506.7086354673607,
+        "coverage": 97.6958491007487,
+        "overlap": 2.5333333333333337,
+        "entropy": 0.4210630403568336
+      }
+    },
+    "actor_loss": -0.006090858682000544,
+    "critic_loss": 0.08009222347754985,
+    "entropy": 0.33499108254909515,
+    "ent_coef": 0.003
+  },
+  {
+    "update": 340,
+    "train_joint_reward": 756.9125315348307,
+    "train_coverage": 97.69463340891912,
+    "train_overlap": 1.6349206349206349,
+    "train_entropy": 0.3577438143510667,
+    "eval": {
+      "simple": {
+        "joint_reward": 647.4727628875474,
+        "coverage": 97.8494644165039,
+        "overlap": 1.8,
+        "entropy": 0.49988120988557483
+      },
+      "mixed": {
+        "joint_reward": 1002.0981264887226,
+        "coverage": 97.85713195800781,
+        "overlap": 0.2,
+        "entropy": 0.24449421773050556
+      },
+      "bottleneck": {
+        "joint_reward": -14542.664908164219,
+        "coverage": 93.33332824707031,
+        "overlap": 1.0,
+        "entropy": 0.5469085518368999
+      },
+      "mean": {
+        "joint_reward": -4297.69800626265,
+        "coverage": 96.34664154052734,
+        "overlap": 1.0,
+        "entropy": 0.4304279931509934
+      }
+    },
+    "actor_loss": -0.00591579938918585,
+    "critic_loss": 0.08156969607807696,
+    "entropy": 0.35152273438870907,
+    "ent_coef": 0.003
+  },
+  {
+    "update": 350,
+    "train_joint_reward": 710.7934259176254,
+    "train_coverage": 97.67485119047618,
+    "train_overlap": 1.453125,
+    "train_entropy": 0.3613335054833442,
+    "eval": {
+      "simple": {
+        "joint_reward": 676.7331436216018,
+        "coverage": 97.8494644165039,
+        "overlap": 1.8,
+        "entropy": 0.47019166636122856
+      },
+      "mixed": {
+        "joint_reward": 88.48956255261844,
+        "coverage": 97.6190414428711,
+        "overlap": 4.4,
+        "entropy": 0.33486651934346945
+      },
+      "bottleneck": {
+        "joint_reward": -72.38174304023637,
+        "coverage": 97.6190414428711,
+        "overlap": 0.2,
+        "entropy": 0.5253597643084988
+      },
+      "mean": {
+        "joint_reward": 230.94698771132792,
+        "coverage": 97.6958491007487,
+        "overlap": 2.1333333333333333,
+        "entropy": 0.4434726500043989
+      }
+    },
+    "actor_loss": -0.005990932433633134,
+    "critic_loss": 0.10805943631567061,
+    "entropy": 0.3455088622868061,
+    "ent_coef": 0.003
+  },
+  {
+    "update": 360,
+    "train_joint_reward": 754.2650876726423,
+    "train_coverage": 97.65684051398337,
+    "train_overlap": 1.0476190476190477,
+    "train_entropy": 0.3725882662194116,
+    "eval": {
+      "simple": {
+        "joint_reward": 737.4393605270523,
+        "coverage": 98.06452178955078,
+        "overlap": 3.6,
+        "entropy": 0.4861763123499652
+      },
+      "mixed": {
+        "joint_reward": -17616.26728568512,
+        "coverage": 97.14286041259766,
+        "overlap": 0.2,
+        "entropy": 0.32937183678584486
+      },
+      "bottleneck": {
+        "joint_reward": 172.0498133664867,
+        "coverage": 97.6190414428711,
+        "overlap": 2.4,
+        "entropy": 0.4794961005758642
+      },
+      "mean": {
+        "joint_reward": -5568.92603726386,
+        "coverage": 97.60880788167317,
+        "overlap": 2.066666666666667,
+        "entropy": 0.4316814165705581
+      }
+    },
+    "actor_loss": -0.006315082820947282,
+    "critic_loss": 0.08766944357194006,
+    "entropy": 0.3710310384631157,
+    "ent_coef": 0.003
+  },
+  {
+    "update": 370,
+    "train_joint_reward": 703.7055031912668,
+    "train_coverage": 97.65684051398337,
+    "train_overlap": 1.380952380952381,
+    "train_entropy": 0.37531856411979314,
+    "eval": {
+      "simple": {
+        "joint_reward": 1036.034374307817,
+        "coverage": 97.8494644165039,
+        "overlap": 0.6,
+        "entropy": 0.3904710192066997
+      },
+      "mixed": {
+        "joint_reward": 1050.896071892693,
+        "coverage": 97.6190414428711,
+        "overlap": 0.2,
+        "entropy": 0.276170060827649
+      },
+      "bottleneck": {
+        "joint_reward": 205.1101046608435,
+        "coverage": 97.6190414428711,
+        "overlap": 0.2,
+        "entropy": 0.47949109924452193
+      },
+      "mean": {
+        "joint_reward": 764.0135169537847,
+        "coverage": 97.6958491007487,
+        "overlap": 0.3333333333333333,
+        "entropy": 0.3820440597596235
+      }
+    },
+    "actor_loss": -0.0068705678640981205,
+    "critic_loss": 0.10428884462453425,
+    "entropy": 0.3649462219327688,
+    "ent_coef": 0.003
+  },
+  {
+    "update": 380,
+    "train_joint_reward": 752.6006784590464,
+    "train_coverage": 97.63794406651549,
+    "train_overlap": 1.7777777777777777,
+    "train_entropy": 0.36409040812462096,
+    "eval": {
+      "simple": {
+        "joint_reward": 897.6848140393191,
+        "coverage": 97.8494644165039,
+        "overlap": 2.2,
+        "entropy": 0.47221178984344403
+      },
+      "mixed": {
+        "joint_reward": 1057.859851781754,
+        "coverage": 97.6190414428711,
+        "overlap": 1.0,
+        "entropy": 0.2261151151235555
+      },
+      "bottleneck": {
+        "joint_reward": -13255.526718726624,
+        "coverage": 88.57142639160156,
+        "overlap": 6.8,
+        "entropy": 0.47842926219614
+      },
+      "mean": {
+        "joint_reward": -3766.6606843018503,
+        "coverage": 94.67997741699219,
+        "overlap": 3.3333333333333335,
+        "entropy": 0.3922520557210465
+      }
+    },
+    "actor_loss": -0.006047536779078655,
+    "critic_loss": 0.07694221951533109,
+    "entropy": 0.35427284985780716,
+    "ent_coef": 0.003
+  },
+  {
+    "update": 390,
+    "train_joint_reward": 701.4450926780701,
+    "train_coverage": 97.71205357142857,
+    "train_overlap": 1.6875,
+    "train_entropy": 0.3795578994322568,
+    "eval": {
+      "simple": {
+        "joint_reward": -17889.62419025786,
+        "coverage": 89.46236419677734,
+        "overlap": 3.6,
+        "entropy": 0.4368332278879413
+      },
+      "mixed": {
+        "joint_reward": 1000.7484895179384,
+        "coverage": 97.6190414428711,
+        "overlap": 0.6,
+        "entropy": 0.27210372068619554
+      },
+      "bottleneck": {
+        "joint_reward": 351.5164664229136,
+        "coverage": 97.6190414428711,
+        "overlap": 1.0,
+        "entropy": 0.5169053210443991
+      },
+      "mean": {
+        "joint_reward": -5512.45307810567,
+        "coverage": 94.90014902750652,
+        "overlap": 1.7333333333333334,
+        "entropy": 0.40861408987284537
+      }
+    },
+    "actor_loss": -0.005686528824298875,
+    "critic_loss": 0.10347786638885736,
+    "entropy": 0.37328762374818325,
+    "ent_coef": 0.003
+  },
+  {
+    "update": 400,
+    "train_joint_reward": 793.2490553422408,
+    "train_coverage": 97.65512265512265,
+    "train_overlap": 1.6515151515151516,
+    "train_entropy": 0.361093346593958,
+    "eval": {
+      "simple": {
+        "joint_reward": 858.219859013873,
+        "coverage": 98.06451416015625,
+        "overlap": 3.4,
+        "entropy": 0.42051097774685003
+      },
+      "mixed": {
+        "joint_reward": 1067.599925256539,
+        "coverage": 97.85713195800781,
+        "overlap": 1.2,
+        "entropy": 0.24193156094752247
+      },
+      "bottleneck": {
+        "joint_reward": -43.40716077406328,
+        "coverage": 97.85713195800781,
+        "overlap": 0.2,
+        "entropy": 0.512694257882576
+      },
+      "mean": {
+        "joint_reward": 627.470874498783,
+        "coverage": 97.92625935872395,
+        "overlap": 1.5999999999999999,
+        "entropy": 0.39171226552564953
+      }
+    },
+    "actor_loss": -0.006186073074786691,
+    "critic_loss": 0.046066378708928823,
+    "entropy": 0.3462410783395171,
+    "ent_coef": 0.003
+  },
+  {
+    "update": 410,
+    "train_joint_reward": 706.5094623565674,
+    "train_coverage": 97.65625,
+    "train_overlap": 1.96875,
+    "train_entropy": 0.3762073910329491,
+    "eval": {
+      "simple": {
+        "joint_reward": 911.2533274478297,
+        "coverage": 97.8494644165039,
+        "overlap": 3.0,
+        "entropy": 0.4239192267746145
+      },
+      "mixed": {
+        "joint_reward": 1002.372798810769,
+        "coverage": 97.85713195800781,
+        "overlap": 0.8,
+        "entropy": 0.23875197361665607
+      },
+      "bottleneck": {
+        "joint_reward": 320.8817080979946,
+        "coverage": 97.6190414428711,
+        "overlap": 0.0,
+        "entropy": 0.5354872381249067
+      },
+      "mean": {
+        "joint_reward": 744.8359447855311,
+        "coverage": 97.77521260579427,
+        "overlap": 1.2666666666666666,
+        "entropy": 0.39938614617205914
+      }
+    },
+    "actor_loss": -0.007246631881571375,
+    "critic_loss": 0.08717635995708406,
+    "entropy": 0.37809703033417463,
+    "ent_coef": 0.003
+  },
+  {
+    "update": 420,
+    "train_joint_reward": 754.5917820649988,
+    "train_coverage": 97.67156862745097,
+    "train_overlap": 1.8088235294117647,
+    "train_entropy": 0.34526020551429076,
+    "eval": {
+      "simple": {
+        "joint_reward": 850.8046197885764,
+        "coverage": 97.8494644165039,
+        "overlap": 0.4,
+        "entropy": 0.47474445303878376
+      },
+      "mixed": {
+        "joint_reward": 1042.6152495547703,
+        "coverage": 97.6190414428711,
+        "overlap": 1.8,
+        "entropy": 0.25751188911238265
+      },
+      "bottleneck": {
+        "joint_reward": -12150.343679647793,
+        "coverage": 97.14285278320312,
+        "overlap": 0.4,
+        "entropy": 0.5653281115270519
+      },
+      "mean": {
+        "joint_reward": -3418.9746034348154,
+        "coverage": 97.53711954752605,
+        "overlap": 0.8666666666666667,
+        "entropy": 0.43252815122607274
+      }
+    },
+    "actor_loss": -0.006407989938452374,
+    "critic_loss": 0.08420825563371181,
+    "entropy": 0.33538899663835764,
+    "ent_coef": 0.003
+  },
+  {
+    "update": 430,
+    "train_joint_reward": 664.2924678741939,
+    "train_coverage": 97.67573696145125,
+    "train_overlap": 1.5238095238095237,
+    "train_entropy": 0.3774630654425848,
+    "eval": {
+      "simple": {
+        "joint_reward": 21.182871168559494,
+        "coverage": 97.8494644165039,
+        "overlap": 1.8,
+        "entropy": 0.4673106285816825
+      },
+      "mixed": {
+        "joint_reward": -16955.268469163806,
+        "coverage": 96.66666412353516,
+        "overlap": 3.6,
+        "entropy": 0.4076172428215371
+      },
+      "bottleneck": {
+        "joint_reward": -25312.005885328268,
+        "coverage": 93.33332824707031,
+        "overlap": 1.2,
+        "entropy": 0.6697083433244213
+      },
+      "mean": {
+        "joint_reward": -14082.030494441171,
+        "coverage": 95.94981892903645,
+        "overlap": 2.2,
+        "entropy": 0.5148787382425469
+      }
+    },
+    "actor_loss": -0.005600456264801323,
+    "critic_loss": 0.11997935199178755,
+    "entropy": 0.37099706567823887,
+    "ent_coef": 0.003
+  },
+  {
+    "update": 440,
+    "train_joint_reward": 750.2269436120987,
+    "train_coverage": 97.65624999999999,
+    "train_overlap": 1.953125,
+    "train_entropy": 0.3406643334310502,
+    "eval": {
+      "simple": {
+        "joint_reward": 1022.5032306057919,
+        "coverage": 98.06452178955078,
+        "overlap": 0.2,
+        "entropy": 0.37831427525529915
+      },
+      "mixed": {
+        "joint_reward": 1062.015887692852,
+        "coverage": 97.85713958740234,
+        "overlap": 0.6,
+        "entropy": 0.2618488672645592
+      },
+      "bottleneck": {
+        "joint_reward": -1688.6991393793182,
+        "coverage": 97.6190414428711,
+        "overlap": 2.6,
+        "entropy": 0.5047626399312863
+      },
+      "mean": {
+        "joint_reward": 131.93999297310847,
+        "coverage": 97.8469009399414,
+        "overlap": 1.1333333333333335,
+        "entropy": 0.3816419274837149
+      }
+    },
+    "actor_loss": -0.00572586887574289,
+    "critic_loss": 0.07711200905032456,
+    "entropy": 0.33153705671429634,
+    "ent_coef": 0.003
+  },
+  {
+    "update": 450,
+    "train_joint_reward": 734.2091152667999,
+    "train_coverage": 97.67485119047618,
+    "train_overlap": 2.234375,
+    "train_entropy": 0.33750794222578406,
+    "eval": {
+      "simple": {
+        "joint_reward": 275.28514667054907,
+        "coverage": 97.8494644165039,
+        "overlap": 7.2,
+        "entropy": 0.45660725931081786
+      },
+      "mixed": {
+        "joint_reward": 1065.412221326374,
+        "coverage": 97.6190414428711,
+        "overlap": 1.2,
+        "entropy": 0.2620502535932975
+      },
+      "bottleneck": {
+        "joint_reward": -1436.789345392239,
+        "coverage": 97.6190414428711,
+        "overlap": 0.4,
+        "entropy": 0.578341670178353
+      },
+      "mean": {
+        "joint_reward": -32.030659131772005,
+        "coverage": 97.6958491007487,
+        "overlap": 2.9333333333333336,
+        "entropy": 0.4323330610274894
+      }
+    },
+    "actor_loss": -0.009430265374248847,
+    "critic_loss": 0.11189601523801684,
+    "entropy": 0.332648073323071,
+    "ent_coef": 0.003
+  },
+  {
+    "update": 460,
+    "train_joint_reward": 736.4869770859227,
+    "train_coverage": 97.65512265512265,
+    "train_overlap": 2.5303030303030303,
+    "train_entropy": 0.34434707349900046,
+    "eval": {
+      "simple": {
+        "joint_reward": 742.7405706274674,
+        "coverage": 97.8494644165039,
+        "overlap": 4.2,
+        "entropy": 0.4007930905069948
+      },
+      "mixed": {
+        "joint_reward": 994.2664450982329,
+        "coverage": 97.6190414428711,
+        "overlap": 3.6,
+        "entropy": 0.2111164030073605
+      },
+      "bottleneck": {
+        "joint_reward": -15769.274051970831,
+        "coverage": 86.66666412353516,
+        "overlap": 0.2,
+        "entropy": 0.5960150452918707
+      },
+      "mean": {
+        "joint_reward": -4677.422345415044,
+        "coverage": 94.04505666097005,
+        "overlap": 2.6666666666666665,
+        "entropy": 0.4026415129354087
+      }
+    },
+    "actor_loss": -0.004405119638249744,
+    "critic_loss": 0.07455253694206476,
+    "entropy": 0.3254819130524993,
+    "ent_coef": 0.003
+  },
+  {
+    "update": 470,
+    "train_joint_reward": 770.6400259164664,
+    "train_coverage": 97.67399267399267,
+    "train_overlap": 1.7846153846153847,
+    "train_entropy": 0.33797041727946353,
+    "eval": {
+      "simple": {
+        "joint_reward": 667.3362403958696,
+        "coverage": 97.8494644165039,
+        "overlap": 3.6,
+        "entropy": 0.5009237525370978
+      },
+      "mixed": {
+        "joint_reward": 1091.9700224385942,
+        "coverage": 97.6190414428711,
+        "overlap": 0.2,
+        "entropy": 0.2336866257151824
+      },
+      "bottleneck": {
+        "joint_reward": -506.99675671805363,
+        "coverage": 97.6190414428711,
+        "overlap": 0.6,
+        "entropy": 0.5072775578374402
+      },
+      "mean": {
+        "joint_reward": 417.4365020388034,
+        "coverage": 97.6958491007487,
+        "overlap": 1.4666666666666668,
+        "entropy": 0.4139626453632401
+      }
+    },
+    "actor_loss": -0.004439309854205931,
+    "critic_loss": 0.06745280988980085,
+    "entropy": 0.3299868833273649,
+    "ent_coef": 0.003
+  },
+  {
+    "update": 480,
+    "train_joint_reward": 731.6503983717698,
+    "train_coverage": 97.6190476190476,
+    "train_overlap": 2.123076923076923,
+    "train_entropy": 0.3369844581072147,
+    "eval": {
+      "simple": {
+        "joint_reward": 25.97795608939473,
+        "coverage": 97.8494644165039,
+        "overlap": 4.4,
+        "entropy": 0.4848553876922083
+      },
+      "mixed": {
+        "joint_reward": 1028.4070611708503,
+        "coverage": 97.6190414428711,
+        "overlap": 1.8,
+        "entropy": 0.26885868150176445
+      },
+      "bottleneck": {
+        "joint_reward": 36.332405483655634,
+        "coverage": 97.6190414428711,
+        "overlap": 1.2,
+        "entropy": 0.45839773153047075
+      },
+      "mean": {
+        "joint_reward": 363.5724742479668,
+        "coverage": 97.6958491007487,
+        "overlap": 2.466666666666667,
+        "entropy": 0.40403726690814784
+      }
+    },
+    "actor_loss": -0.004556422645691782,
+    "critic_loss": 0.0797932199202478,
+    "entropy": 0.3238883791491389,
+    "ent_coef": 0.003
+  },
+  {
+    "update": 490,
+    "train_joint_reward": 716.2784695095486,
+    "train_coverage": 97.69463340891912,
+    "train_overlap": 1.6031746031746033,
+    "train_entropy": 0.3358826410202753,
+    "eval": {
+      "simple": {
+        "joint_reward": 369.7833659131626,
+        "coverage": 97.8494644165039,
+        "overlap": 6.8,
+        "entropy": 0.46535668200936653
+      },
+      "mixed": {
+        "joint_reward": 1063.2961925806317,
+        "coverage": 97.6190414428711,
+        "overlap": 0.8,
+        "entropy": 0.23302632812606747
+      },
+      "bottleneck": {
+        "joint_reward": -179.2057404127575,
+        "coverage": 97.6190414428711,
+        "overlap": 0.8,
+        "entropy": 0.5278236774210832
+      },
+      "mean": {
+        "joint_reward": 417.95793936034556,
+        "coverage": 97.6958491007487,
+        "overlap": 2.8000000000000003,
+        "entropy": 0.4087355625188391
+      }
+    },
+    "actor_loss": -0.005713297468901146,
+    "critic_loss": 0.14609320322051644,
+    "entropy": 0.3286580601707101,
+    "ent_coef": 0.003
+  },
+  {
+    "update": 500,
+    "train_joint_reward": 765.8516621589661,
+    "train_coverage": 97.6190476190476,
+    "train_overlap": 1.21875,
+    "train_entropy": 0.3378957472741604,
+    "eval": {
+      "simple": {
+        "joint_reward": 811.2317821576519,
+        "coverage": 97.8494644165039,
+        "overlap": 4.2,
+        "entropy": 0.3911088420965416
+      },
+      "mixed": {
+        "joint_reward": -2743.500795058895,
+        "coverage": 97.6190414428711,
+        "overlap": 0.4,
+        "entropy": 0.3790728555027566
+      },
+      "bottleneck": {
+        "joint_reward": -134.1222390937807,
+        "coverage": 97.6190414428711,
+        "overlap": 0.2,
+        "entropy": 0.4650944417730648
+      },
+      "mean": {
+        "joint_reward": -688.7970839983413,
+        "coverage": 97.6958491007487,
+        "overlap": 1.6000000000000003,
+        "entropy": 0.411758713124121
+      }
+    },
+    "actor_loss": -0.005961112947261427,
+    "critic_loss": 0.08400540798902512,
+    "entropy": 0.32284605596214533,
+    "ent_coef": 0.003
+  },
+  {
+    "update": 510,
+    "train_joint_reward": 795.274922649677,
+    "train_coverage": 97.65567765567766,
+    "train_overlap": 1.8153846153846154,
+    "train_entropy": 0.3247123408776063,
+    "eval": {
+      "simple": {
+        "joint_reward": 630.3048088968807,
+        "coverage": 97.8494644165039,
+        "overlap": 2.6,
+        "entropy": 0.4628568876484648
+      },
+      "mixed": {
+        "joint_reward": 1066.9141307922462,
+        "coverage": 97.85713195800781,
+        "overlap": 1.4,
+        "entropy": 0.20952431922616208
+      },
+      "bottleneck": {
+        "joint_reward": -12925.858751592772,
+        "coverage": 94.76190185546875,
+        "overlap": 0.6,
+        "entropy": 0.5064349158208856
+      },
+      "mean": {
+        "joint_reward": -3742.8799373012153,
+        "coverage": 96.82283274332683,
+        "overlap": 1.5333333333333332,
+        "entropy": 0.39293870756517085
+      }
+    },
+    "actor_loss": -0.005493390868650749,
+    "critic_loss": 0.07657906110398471,
+    "entropy": 0.31292916368693113,
+    "ent_coef": 0.003
+  },
+  {
+    "update": 520,
+    "train_joint_reward": 783.5680556577795,
+    "train_coverage": 97.68907563025209,
+    "train_overlap": 1.5294117647058822,
+    "train_entropy": 0.32564373270553704,
+    "eval": {
+      "simple": {
+        "joint_reward": 885.967889236005,
+        "coverage": 97.8494644165039,
+        "overlap": 2.6,
+        "entropy": 0.43782283594226357
+      },
+      "mixed": {
+        "joint_reward": 950.2434916387285,
+        "coverage": 97.6190414428711,
+        "overlap": 0.2,
+        "entropy": 0.23864001911938204
+      },
+      "bottleneck": {
+        "joint_reward": -1045.0859114316077,
+        "coverage": 97.6190414428711,
+        "overlap": 2.0,
+        "entropy": 0.5076765050548498
+      },
+      "mean": {
+        "joint_reward": 263.7084898143753,
+        "coverage": 97.6958491007487,
+        "overlap": 1.6000000000000003,
+        "entropy": 0.3947131200388318
+      }
+    },
+    "actor_loss": -0.005444328297016909,
+    "critic_loss": 0.07774946046993136,
+    "entropy": 0.3144854661077261,
+    "ent_coef": 0.003
+  },
+  {
+    "update": 530,
+    "train_joint_reward": 818.2197484258395,
+    "train_coverage": 97.65458422174841,
+    "train_overlap": 1.2388059701492538,
+    "train_entropy": 0.33402671631592423,
+    "eval": {
+      "simple": {
+        "joint_reward": -17339.688720175793,
+        "coverage": 95.26881408691406,
+        "overlap": 0.2,
+        "entropy": 0.5091943277081364
+      },
+      "mixed": {
+        "joint_reward": 1069.3647608166648,
+        "coverage": 97.6190414428711,
+        "overlap": 1.0,
+        "entropy": 0.22430992804384808
+      },
+      "bottleneck": {
+        "joint_reward": -417.06315511158544,
+        "coverage": 97.6190414428711,
+        "overlap": 2.4,
+        "entropy": 0.4542277002937151
+      },
+      "mean": {
+        "joint_reward": -5562.462371490237,
+        "coverage": 96.83563232421875,
+        "overlap": 1.2,
+        "entropy": 0.3959106520152332
+      }
+    },
+    "actor_loss": -0.004923859181872103,
+    "critic_loss": 0.07137579494155943,
+    "entropy": 0.3098883833736181,
+    "ent_coef": 0.003
+  },
+  {
+    "update": 540,
+    "train_joint_reward": 805.2905430649266,
+    "train_coverage": 97.65512265512265,
+    "train_overlap": 1.4545454545454546,
+    "train_entropy": 0.31518242079200165,
+    "eval": {
+      "simple": {
+        "joint_reward": 628.5723741047357,
+        "coverage": 97.8494644165039,
+        "overlap": 0.0,
+        "entropy": 0.46402556268122197
+      },
+      "mixed": {
+        "joint_reward": 936.8194499142967,
+        "coverage": 97.6190414428711,
+        "overlap": 3.2,
+        "entropy": 0.23626822096345296
+      },
+      "bottleneck": {
+        "joint_reward": 264.5772777036637,
+        "coverage": 97.6190414428711,
+        "overlap": 3.8,
+        "entropy": 0.43205135506377496
+      },
+      "mean": {
+        "joint_reward": 609.989700574232,
+        "coverage": 97.6958491007487,
+        "overlap": 2.3333333333333335,
+        "entropy": 0.37744837956948335
+      }
+    },
+    "actor_loss": -0.0048941439599730074,
+    "critic_loss": 0.09114552452228963,
+    "entropy": 0.29203291796147823,
+    "ent_coef": 0.003
+  },
+  {
+    "update": 550,
+    "train_joint_reward": 731.3663367638221,
+    "train_coverage": 97.65567765567766,
+    "train_overlap": 1.6615384615384616,
+    "train_entropy": 0.3229273041853538,
+    "eval": {
+      "simple": {
+        "joint_reward": 436.21961675119485,
+        "coverage": 97.8494644165039,
+        "overlap": 0.6,
+        "entropy": 0.49601557660778167
+      },
+      "mixed": {
+        "joint_reward": 943.6901585905892,
+        "coverage": 97.6190414428711,
+        "overlap": 3.2,
+        "entropy": 0.23713027788833307
+      },
+      "bottleneck": {
+        "joint_reward": 447.1834584375878,
+        "coverage": 97.6190414428711,
+        "overlap": 0.4,
+        "entropy": 0.4073948368041087
+      },
+      "mean": {
+        "joint_reward": 609.0310779264573,
+        "coverage": 97.6958491007487,
+        "overlap": 1.4000000000000001,
+        "entropy": 0.3801802304334078
+      }
+    },
+    "actor_loss": -0.008073205721302656,
+    "critic_loss": 0.14956696121953428,
+    "entropy": 0.3154448317363858,
+    "ent_coef": 0.003
+  },
+  {
+    "update": 560,
+    "train_joint_reward": 837.4142432141659,
+    "train_coverage": 97.636815920398,
+    "train_overlap": 1.1194029850746268,
+    "train_entropy": 0.2925824451802382,
+    "eval": {
+      "simple": {
+        "joint_reward": 990.0090458631734,
+        "coverage": 97.8494644165039,
+        "overlap": 2.8,
+        "entropy": 0.38174362603337775
+      },
+      "mixed": {
+        "joint_reward": 966.6887320364089,
+        "coverage": 97.6190414428711,
+        "overlap": 0.4,
+        "entropy": 0.2664535928449184
+      },
+      "bottleneck": {
+        "joint_reward": -65.01872877817297,
+        "coverage": 97.6190414428711,
+        "overlap": 0.8,
+        "entropy": 0.4563549819004802
+      },
+      "mean": {
+        "joint_reward": 630.5596830404697,
+        "coverage": 97.6958491007487,
+        "overlap": 1.3333333333333333,
+        "entropy": 0.36818406692625877
+      }
+    },
+    "actor_loss": -0.004552698250336107,
+    "critic_loss": 0.07871691905893385,
+    "entropy": 0.29310720693320036,
+    "ent_coef": 0.003
+  },
+  {
+    "update": 570,
+    "train_joint_reward": 870.0287254920372,
+    "train_coverage": 97.67399267399266,
+    "train_overlap": 1.0769230769230769,
+    "train_entropy": 0.3132231634396773,
+    "eval": {
+      "simple": {
+        "joint_reward": 662.1916492969613,
+        "coverage": 97.8494644165039,
+        "overlap": 3.2,
+        "entropy": 0.39058193294522214
+      },
+      "mixed": {
+        "joint_reward": 782.194849343981,
+        "coverage": 97.6190414428711,
+        "overlap": 5.2,
+        "entropy": 0.2803833538157038
+      },
+      "bottleneck": {
+        "joint_reward": 521.0876828932384,
+        "coverage": 97.6190414428711,
+        "overlap": 0.0,
+        "entropy": 0.43247215628120694
+      },
+      "mean": {
+        "joint_reward": 655.1580605113935,
+        "coverage": 97.6958491007487,
+        "overlap": 2.8000000000000003,
+        "entropy": 0.36781248101404423
+      }
+    },
+    "actor_loss": -0.0041228091140510514,
+    "critic_loss": 0.04998041002545506,
+    "entropy": 0.30352768395096064,
+    "ent_coef": 0.003
+  },
+  {
+    "update": 580,
+    "train_joint_reward": 815.7713312091249,
+    "train_coverage": 97.6190476190476,
+    "train_overlap": 1.4393939393939394,
+    "train_entropy": 0.2946614541790702,
+    "eval": {
+      "simple": {
+        "joint_reward": 713.8071072266691,
+        "coverage": 97.8494644165039,
+        "overlap": 1.6,
+        "entropy": 0.41978433358301104
+      },
+      "mixed": {
+        "joint_reward": 998.6400545501708,
+        "coverage": 97.6190414428711,
+        "overlap": 1.2,
+        "entropy": 0.24192864349453463
+      },
+      "bottleneck": {
+        "joint_reward": 653.9253254006401,
+        "coverage": 97.6190414428711,
+        "overlap": 0.4,
+        "entropy": 0.4195688488449152
+      },
+      "mean": {
+        "joint_reward": 788.79082905916,
+        "coverage": 97.6958491007487,
+        "overlap": 1.0666666666666667,
+        "entropy": 0.3604272753074869
+      }
+    },
+    "actor_loss": -0.0033270107524003834,
+    "critic_loss": 0.07266339333727956,
+    "entropy": 0.287370165809989,
+    "ent_coef": 0.003
+  },
+  {
+    "update": 590,
+    "train_joint_reward": 727.4227818415715,
+    "train_coverage": 97.6190476190476,
+    "train_overlap": 1.7076923076923076,
+    "train_entropy": 0.2903286826152068,
+    "eval": {
+      "simple": {
+        "joint_reward": 915.7798610707763,
+        "coverage": 97.8494644165039,
+        "overlap": 3.2,
+        "entropy": 0.42336746090418637
+      },
+      "mixed": {
+        "joint_reward": 976.528335067204,
+        "coverage": 97.6190414428711,
+        "overlap": 2.4,
+        "entropy": 0.2410098121531496
+      },
+      "bottleneck": {
+        "joint_reward": -8.91433747458077,
+        "coverage": 97.85713958740234,
+        "overlap": 1.0,
+        "entropy": 0.499178349026541
+      },
+      "mean": {
+        "joint_reward": 627.7979528877999,
+        "coverage": 97.77521514892578,
+        "overlap": 2.1999999999999997,
+        "entropy": 0.387851874027959
+      }
+    },
+    "actor_loss": -0.005572591500822455,
+    "critic_loss": 0.20969040133059025,
+    "entropy": 0.2829136811196804,
+    "ent_coef": 0.003
+  },
+  {
+    "update": 600,
+    "train_joint_reward": 864.9232732599431,
+    "train_coverage": 97.69119769119769,
+    "train_overlap": 1.7575757575757576,
+    "train_entropy": 0.2677456628192555,
+    "eval": {
+      "simple": {
+        "joint_reward": 634.7192182137742,
+        "coverage": 97.8494644165039,
+        "overlap": 1.0,
+        "entropy": 0.4553700863252311
+      },
+      "mixed": {
+        "joint_reward": 1097.5817498102642,
+        "coverage": 97.6190414428711,
+        "overlap": 0.6,
+        "entropy": 0.20215479034290626
+      },
+      "bottleneck": {
+        "joint_reward": 595.5870454067655,
+        "coverage": 97.6190414428711,
+        "overlap": 0.4,
+        "entropy": 0.4313929206293749
+      },
+      "mean": {
+        "joint_reward": 775.9626711436013,
+        "coverage": 97.6958491007487,
+        "overlap": 0.6666666666666666,
+        "entropy": 0.3629725990991708
+      }
+    },
+    "actor_loss": -0.004060876926814672,
+    "critic_loss": 0.08428341592662036,
+    "entropy": 0.26248601730912924,
+    "ent_coef": 0.003
+  },
+  {
+    "update": 610,
+    "train_joint_reward": 823.8568232439567,
+    "train_coverage": 97.65355417529331,
+    "train_overlap": 1.565217391304348,
+    "train_entropy": 0.3019325463236242,
+    "eval": {
+      "simple": {
+        "joint_reward": 958.2479294331868,
+        "coverage": 97.8494644165039,
+        "overlap": 0.8,
+        "entropy": 0.40759623291626446
+      },
+      "mixed": {
+        "joint_reward": 1104.3945190158036,
+        "coverage": 97.85713195800781,
+        "overlap": 0.6,
+        "entropy": 0.204263127602903
+      },
+      "bottleneck": {
+        "joint_reward": 307.97464173011986,
+        "coverage": 97.6190414428711,
+        "overlap": 0.4,
+        "entropy": 0.4146726521848508
+      },
+      "mean": {
+        "joint_reward": 790.2056967263701,
+        "coverage": 97.77521260579427,
+        "overlap": 0.6,
+        "entropy": 0.3421773375680061
+      }
+    },
+    "actor_loss": -0.004109542052901816,
+    "critic_loss": 0.06974884541705251,
+    "entropy": 0.28708658274263144,
+    "ent_coef": 0.003
+  },
+  {
+    "update": 620,
+    "train_joint_reward": 807.3972449583166,
+    "train_coverage": 97.6890756302521,
+    "train_overlap": 1.5147058823529411,
+    "train_entropy": 0.30184238842305017,
+    "eval": {
+      "simple": {
+        "joint_reward": 803.0580332389613,
+        "coverage": 97.8494644165039,
+        "overlap": 5.0,
+        "entropy": 0.36887696000993947
+      },
+      "mixed": {
+        "joint_reward": 978.1704759974018,
+        "coverage": 97.85713195800781,
+        "overlap": 0.4,
+        "entropy": 0.22748415653745338
+      },
+      "bottleneck": {
+        "joint_reward": 785.4868376840864,
+        "coverage": 97.6190414428711,
+        "overlap": 0.4,
+        "entropy": 0.3977149338871574
+      },
+      "mean": {
+        "joint_reward": 855.5717823068165,
+        "coverage": 97.77521260579427,
+        "overlap": 1.9333333333333336,
+        "entropy": 0.3313586834781834
+      }
+    },
+    "actor_loss": -0.010152189352083951,
+    "critic_loss": 0.11815406335517764,
+    "entropy": 0.29079319443553686,
+    "ent_coef": 0.003
+  },
+  {
+    "update": 630,
+    "train_joint_reward": 813.236015661439,
+    "train_coverage": 97.65458422174841,
+    "train_overlap": 1.9104477611940298,
+    "train_entropy": 0.3049895072828478,
+    "eval": {
+      "simple": {
+        "joint_reward": 636.0037523259105,
+        "coverage": 97.8494644165039,
+        "overlap": 4.4,
+        "entropy": 0.41722990185995795
+      },
+      "mixed": {
+        "joint_reward": 1135.5764230396412,
+        "coverage": 98.09523010253906,
+        "overlap": 0.2,
+        "entropy": 0.18575400027894742
+      },
+      "bottleneck": {
+        "joint_reward": 263.6976822804648,
+        "coverage": 97.85713958740234,
+        "overlap": 0.2,
+        "entropy": 0.41082647454917537
+      },
+      "mean": {
+        "joint_reward": 678.4259525486722,
+        "coverage": 97.93394470214844,
+        "overlap": 1.6000000000000003,
+        "entropy": 0.3379367922293603
+      }
+    },
+    "actor_loss": -0.004816229680727702,
+    "critic_loss": 0.076820281567052,
+    "entropy": 0.30190453957766294,
+    "ent_coef": 0.003
+  },
+  {
+    "update": 640,
+    "train_joint_reward": 798.9339592777081,
+    "train_coverage": 97.636815920398,
+    "train_overlap": 2.029850746268657,
+    "train_entropy": 0.28950376719681187,
+    "eval": {
+      "simple": {
+        "joint_reward": 844.7470176154848,
+        "coverage": 97.8494644165039,
+        "overlap": 3.8,
+        "entropy": 0.39207557274174887
+      },
+      "mixed": {
+        "joint_reward": 1041.2926364762443,
+        "coverage": 97.6190414428711,
+        "overlap": 0.8,
+        "entropy": 0.22595462963326213
+      },
+      "bottleneck": {
+        "joint_reward": -2597.768768025655,
+        "coverage": 97.6190414428711,
+        "overlap": 0.2,
+        "entropy": 0.4463003479170822
+      },
+      "mean": {
+        "joint_reward": -237.2430379779753,
+        "coverage": 97.6958491007487,
+        "overlap": 1.5999999999999999,
+        "entropy": 0.3547768500973644
+      }
+    },
+    "actor_loss": -0.004050925075716805,
+    "critic_loss": 0.1002884698100388,
+    "entropy": 0.28373002354055643,
+    "ent_coef": 0.003
+  },
+  {
+    "update": 650,
+    "train_joint_reward": 776.0136422683944,
+    "train_coverage": 97.6723525230988,
+    "train_overlap": 2.4776119402985075,
+    "train_entropy": 0.29851428408231306,
+    "eval": {
+      "simple": {
+        "joint_reward": 601.2170004396393,
+        "coverage": 97.8494644165039,
+        "overlap": 5.0,
+        "entropy": 0.44694259535683206
+      },
+      "mixed": {
+        "joint_reward": 1102.34067789986,
+        "coverage": 97.85713958740234,
+        "overlap": 0.2,
+        "entropy": 0.2149248746324425
+      },
+      "bottleneck": {
+        "joint_reward": 157.42551526638,
+        "coverage": 97.6190414428711,
+        "overlap": 0.8,
+        "entropy": 0.4600854366596252
+      },
+      "mean": {
+        "joint_reward": 620.3277312019599,
+        "coverage": 97.77521514892578,
+        "overlap": 2.0,
+        "entropy": 0.3739843022162999
+      }
+    },
+    "actor_loss": -0.0038826593590783887,
+    "critic_loss": 0.08474483620375395,
+    "entropy": 0.286103799007833,
+    "ent_coef": 0.003
+  },
+  {
+    "update": 660,
+    "train_joint_reward": 857.3197705852451,
+    "train_coverage": 97.65458422174841,
+    "train_overlap": 1.2238805970149254,
+    "train_entropy": 0.27790874176060976,
+    "eval": {
+      "simple": {
+        "joint_reward": 902.2526241579362,
+        "coverage": 97.8494644165039,
+        "overlap": 6.4,
+        "entropy": 0.3491068197987011
+      },
+      "mixed": {
+        "joint_reward": 1036.185742444015,
+        "coverage": 97.6190414428711,
+        "overlap": 0.2,
+        "entropy": 0.2067721998156385
+      },
+      "bottleneck": {
+        "joint_reward": 335.60717126348146,
+        "coverage": 97.6190414428711,
+        "overlap": 1.8,
+        "entropy": 0.4198355910226641
+      },
+      "mean": {
+        "joint_reward": 758.0151792884776,
+        "coverage": 97.6958491007487,
+        "overlap": 2.8000000000000003,
+        "entropy": 0.3252382035456679
+      }
+    },
+    "actor_loss": -0.004952920964569785,
+    "critic_loss": 0.10656875395216048,
+    "entropy": 0.2690445235930383,
+    "ent_coef": 0.003
+  },
+  {
+    "update": 670,
+    "train_joint_reward": 893.7781093431556,
+    "train_coverage": 97.72256728778468,
+    "train_overlap": 1.826086956521739,
+    "train_entropy": 0.2688634686064029,
+    "eval": {
+      "simple": {
+        "joint_reward": 1011.6910382961971,
+        "coverage": 97.8494644165039,
+        "overlap": 0.2,
+        "entropy": 0.4255221934283003
+      },
+      "mixed": {
+        "joint_reward": 922.2368476227488,
+        "coverage": 98.09523010253906,
+        "overlap": 4.6,
+        "entropy": 0.20088227972779205
+      },
+      "bottleneck": {
+        "joint_reward": 767.141692679269,
+        "coverage": 97.6190414428711,
+        "overlap": 0.2,
+        "entropy": 0.39047705958459883
+      },
+      "mean": {
+        "joint_reward": 900.3565261994049,
+        "coverage": 97.85457865397136,
+        "overlap": 1.6666666666666667,
+        "entropy": 0.33896051091356366
+      }
+    },
+    "actor_loss": -0.003661270471639,
+    "critic_loss": 0.0674802161520347,
+    "entropy": 0.26445331424474716,
+    "ent_coef": 0.003
+  },
+  {
+    "update": 680,
+    "train_joint_reward": 843.7471093570484,
+    "train_coverage": 97.6890756302521,
+    "train_overlap": 1.6029411764705883,
+    "train_entropy": 0.29716377771076036,
+    "eval": {
+      "simple": {
+        "joint_reward": 610.726249813865,
+        "coverage": 97.8494644165039,
+        "overlap": 2.6,
+        "entropy": 0.45261771418455227
+      },
+      "mixed": {
+        "joint_reward": 919.8658090738403,
+        "coverage": 97.6190414428711,
+        "overlap": 5.6,
+        "entropy": 0.1848334764769492
+      },
+      "bottleneck": {
+        "joint_reward": -12853.217994459621,
+        "coverage": 97.38095092773438,
+        "overlap": 0.4,
+        "entropy": 0.6164900019434975
+      },
+      "mean": {
+        "joint_reward": -3774.2086451906384,
+        "coverage": 97.61648559570312,
+        "overlap": 2.8666666666666667,
+        "entropy": 0.4179803975349996
+      }
+    },
+    "actor_loss": -0.003004308069648687,
+    "critic_loss": 0.06530056241899729,
+    "entropy": 0.286283103749156,
+    "ent_coef": 0.003
+  },
+  {
+    "update": 690,
+    "train_joint_reward": 821.2495137994939,
+    "train_coverage": 97.69119769119769,
+    "train_overlap": 1.7575757575757576,
+    "train_entropy": 0.274616827680306,
+    "eval": {
+      "simple": {
+        "joint_reward": 74.54265401723976,
+        "coverage": 97.8494644165039,
+        "overlap": 5.8,
+        "entropy": 0.4499967900681721
+      },
+      "mixed": {
+        "joint_reward": 981.0434600584847,
+        "coverage": 97.6190414428711,
+        "overlap": 0.2,
+        "entropy": 0.21359123832308877
+      },
+      "bottleneck": {
+        "joint_reward": -25125.691801767724,
+        "coverage": 93.57142639160156,
+        "overlap": 0.4,
+        "entropy": 0.5832219003231379
+      },
+      "mean": {
+        "joint_reward": -8023.368562563999,
+        "coverage": 96.34664408365886,
+        "overlap": 2.1333333333333333,
+        "entropy": 0.41560330957146624
+      }
+    },
+    "actor_loss": -0.0033502175065223128,
+    "critic_loss": 0.09347669943235815,
+    "entropy": 0.26882568560540676,
+    "ent_coef": 0.003
+  },
+  {
+    "update": 700,
+    "train_joint_reward": 789.3543143994881,
+    "train_coverage": 97.67316017316016,
+    "train_overlap": 1.6363636363636365,
+    "train_entropy": 0.28742471382473456,
+    "eval": {
+      "simple": {
+        "joint_reward": -591.7734970405098,
+        "coverage": 97.8494644165039,
+        "overlap": 2.4,
+        "entropy": 0.495016418104304
+      },
+      "mixed": {
+        "joint_reward": 1071.0941532008678,
+        "coverage": 97.85713195800781,
+        "overlap": 0.2,
+        "entropy": 0.23389258987421152
+      },
+      "bottleneck": {
+        "joint_reward": -230.8652344718811,
+        "coverage": 97.6190414428711,
+        "overlap": 0.8,
+        "entropy": 0.48143649654480375
+      },
+      "mean": {
+        "joint_reward": 82.81847389615896,
+        "coverage": 97.77521260579427,
+        "overlap": 1.1333333333333335,
+        "entropy": 0.4034485015077731
+      }
+    },
+    "actor_loss": -0.0066300410908297636,
+    "critic_loss": 0.13928546220995486,
+    "entropy": 0.2789198216050863,
+    "ent_coef": 0.003
+  },
+  {
+    "update": 710,
+    "train_joint_reward": 841.6541706431996,
+    "train_coverage": 97.67316017316017,
+    "train_overlap": 1.5757575757575757,
+    "train_entropy": 0.2812299658403252,
+    "eval": {
+      "simple": {
+        "joint_reward": 483.4762461560429,
+        "coverage": 98.06452178955078,
+        "overlap": 3.6,
+        "entropy": 0.46787682302493466
+      },
+      "mixed": {
+        "joint_reward": 1070.0431726201375,
+        "coverage": 97.6190414428711,
+        "overlap": 0.2,
+        "entropy": 0.2345570337261072
+      },
+      "bottleneck": {
+        "joint_reward": 478.48370909312416,
+        "coverage": 97.85713958740234,
+        "overlap": 0.6,
+        "entropy": 0.39456392891291975
+      },
+      "mean": {
+        "joint_reward": 677.3343759564349,
+        "coverage": 97.8469009399414,
+        "overlap": 1.4666666666666668,
+        "entropy": 0.3656659285546539
+      }
+    },
+    "actor_loss": -0.002801668360916665,
+    "critic_loss": 0.09833720698952675,
+    "entropy": 0.27459938544780016,
+    "ent_coef": 0.003
+  },
+  {
+    "update": 720,
+    "train_joint_reward": 841.9001182787346,
+    "train_coverage": 97.7092352092352,
+    "train_overlap": 1.1515151515151516,
+    "train_entropy": 0.27570691682172543,
+    "eval": {
+      "simple": {
+        "joint_reward": 1023.5561293874273,
+        "coverage": 98.27957153320312,
+        "overlap": 1.0,
+        "entropy": 0.4011807228265596
+      },
+      "mixed": {
+        "joint_reward": 1063.4146878178915,
+        "coverage": 97.6190414428711,
+        "overlap": 0.6,
+        "entropy": 0.22913910476516275
+      },
+      "bottleneck": {
+        "joint_reward": -6615.561291976441,
+        "coverage": 97.6190414428711,
+        "overlap": 0.2,
+        "entropy": 0.49375299702030323
+      },
+      "mean": {
+        "joint_reward": -1509.5301582570407,
+        "coverage": 97.83921813964844,
+        "overlap": 0.6,
+        "entropy": 0.37469094153734184
+      }
+    },
+    "actor_loss": -0.003058873291593045,
+    "critic_loss": 0.07768249022774398,
+    "entropy": 0.26748742535710335,
+    "ent_coef": 0.003
+  },
+  {
+    "update": 730,
+    "train_joint_reward": 837.0305825987858,
+    "train_coverage": 97.65458422174841,
+    "train_overlap": 1.0,
+    "train_entropy": 0.266539114513504,
+    "eval": {
+      "simple": {
+        "joint_reward": 478.96141824113846,
+        "coverage": 97.8494644165039,
+        "overlap": 4.0,
+        "entropy": 0.4071146077831112
+      },
+      "mixed": {
+        "joint_reward": 1119.2377848325457,
+        "coverage": 97.85713958740234,
+        "overlap": 0.2,
+        "entropy": 0.19247866877693073
+      },
+      "bottleneck": {
+        "joint_reward": 243.96810692166522,
+        "coverage": 97.85713958740234,
+        "overlap": 0.2,
+        "entropy": 0.40516845404172824
+      },
+      "mean": {
+        "joint_reward": 614.0557699984498,
+        "coverage": 97.85458119710286,
+        "overlap": 1.4666666666666668,
+        "entropy": 0.33492057686725674
+      }
+    },
+    "actor_loss": -0.0047586285436409526,
+    "critic_loss": 0.12532191420905292,
+    "entropy": 0.2618909692391753,
+    "ent_coef": 0.003
+  },
+  {
+    "update": 740,
+    "train_joint_reward": 796.6014933730617,
+    "train_coverage": 97.67316017316016,
+    "train_overlap": 1.3181818181818181,
+    "train_entropy": 0.29393315518444235,
+    "eval": {
+      "simple": {
+        "joint_reward": -1410.3500934213212,
+        "coverage": 97.8494644165039,
+        "overlap": 2.4,
+        "entropy": 0.47130942692110833
+      },
+      "mixed": {
+        "joint_reward": 1071.5327785467723,
+        "coverage": 97.85713958740234,
+        "overlap": 0.6,
+        "entropy": 0.20787149062569502
+      },
+      "bottleneck": {
+        "joint_reward": -12410.906979109135,
+        "coverage": 97.38095092773438,
+        "overlap": 0.2,
+        "entropy": 0.5405015662980093
+      },
+      "mean": {
+        "joint_reward": -4249.908097994561,
+        "coverage": 97.6958516438802,
+        "overlap": 1.0666666666666667,
+        "entropy": 0.40656082794827086
+      }
+    },
+    "actor_loss": -0.004060298670083284,
+    "critic_loss": 0.11132676945999265,
+    "entropy": 0.2762648956850171,
+    "ent_coef": 0.003
+  },
+  {
+    "update": 750,
+    "train_joint_reward": 865.7672516090282,
+    "train_coverage": 97.68806073153898,
+    "train_overlap": 1.2753623188405796,
+    "train_entropy": 0.24800920508046082,
+    "eval": {
+      "simple": {
+        "joint_reward": 1102.1062227163889,
+        "coverage": 97.8494644165039,
+        "overlap": 1.2,
+        "entropy": 0.3340998444533154
+      },
+      "mixed": {
+        "joint_reward": 819.8230307388307,
+        "coverage": 97.85713958740234,
+        "overlap": 4.4,
+        "entropy": 0.19878074945569865
+      },
+      "bottleneck": {
+        "joint_reward": -12708.996005458017,
+        "coverage": 96.42857360839844,
+        "overlap": 1.4,
+        "entropy": 0.5369360828673895
+      },
+      "mean": {
+        "joint_reward": -3595.6889173342656,
+        "coverage": 97.37839253743489,
+        "overlap": 2.3333333333333335,
+        "entropy": 0.3566055589254679
+      }
+    },
+    "actor_loss": -0.0023646780173294246,
+    "critic_loss": 0.06577048054896295,
+    "entropy": 0.24195726308971643,
+    "ent_coef": 0.003
+  },
+  {
+    "update": 760,
+    "train_joint_reward": 870.2537348650504,
+    "train_coverage": 97.70531400966183,
+    "train_overlap": 2.347826086956522,
+    "train_entropy": 0.2382604457114054,
+    "eval": {
+      "simple": {
+        "joint_reward": 848.8262242499729,
+        "coverage": 97.8494644165039,
+        "overlap": 2.6,
+        "entropy": 0.37950458570423223
+      },
+      "mixed": {
+        "joint_reward": 1044.3273786517552,
+        "coverage": 97.6190414428711,
+        "overlap": 0.8,
+        "entropy": 0.19038306658952764
+      },
+      "bottleneck": {
+        "joint_reward": 303.0324900160896,
+        "coverage": 97.6190414428711,
+        "overlap": 0.4,
+        "entropy": 0.42414705534752306
+      },
+      "mean": {
+        "joint_reward": 732.062030972606,
+        "coverage": 97.6958491007487,
+        "overlap": 1.2666666666666668,
+        "entropy": 0.3313449025470943
+      }
+    },
+    "actor_loss": -0.002272974801599048,
+    "critic_loss": 0.09294405160471797,
+    "entropy": 0.23715916695073247,
+    "ent_coef": 0.003
+  },
+  {
+    "update": 770,
+    "train_joint_reward": 820.7780967481209,
+    "train_coverage": 97.7092352092352,
+    "train_overlap": 1.4848484848484849,
+    "train_entropy": 0.2695664361570821,
+    "eval": {
+      "simple": {
+        "joint_reward": 1007.8560102429954,
+        "coverage": 97.8494644165039,
+        "overlap": 0.6,
+        "entropy": 0.3765962323941001
+      },
+      "mixed": {
+        "joint_reward": 1087.5305625452315,
+        "coverage": 97.85713958740234,
+        "overlap": 0.8,
+        "entropy": 0.18761716904992717
+      },
+      "bottleneck": {
+        "joint_reward": -16811.451740849363,
+        "coverage": 95.0,
+        "overlap": 0.4,
+        "entropy": 0.5452823195668544
+      },
+      "mean": {
+        "joint_reward": -4905.355056020379,
+        "coverage": 96.90220133463542,
+        "overlap": 0.6,
+        "entropy": 0.36983190700362717
+      }
+    },
+    "actor_loss": -0.003344240627484396,
+    "critic_loss": 0.10616986034438014,
+    "entropy": 0.2641015280969441,
+    "ent_coef": 0.003
+  },
+  {
+    "update": 780,
+    "train_joint_reward": 853.8485655648368,
+    "train_coverage": 97.70408163265306,
+    "train_overlap": 1.5714285714285714,
+    "train_entropy": 0.2465138862175601,
+    "eval": {
+      "simple": {
+        "joint_reward": 972.2217061041614,
+        "coverage": 97.8494644165039,
+        "overlap": 2.4,
+        "entropy": 0.390504251659938
+      },
+      "mixed": {
+        "joint_reward": 1125.1454753648668,
+        "coverage": 97.6190414428711,
+        "overlap": 0.2,
+        "entropy": 0.18045078035251988
+      },
+      "bottleneck": {
+        "joint_reward": -502.22308769490303,
+        "coverage": 97.6190414428711,
+        "overlap": 4.6,
+        "entropy": 0.4656091473601469
+      },
+      "mean": {
+        "joint_reward": 531.7146979247085,
+        "coverage": 97.6958491007487,
+        "overlap": 2.4,
+        "entropy": 0.3455213931242016
+      }
+    },
+    "actor_loss": -0.001940849659149535,
+    "critic_loss": 0.08593019400723279,
+    "entropy": 0.23537720646709204,
+    "ent_coef": 0.003
+  },
+  {
+    "update": 790,
+    "train_joint_reward": 865.9984002249581,
+    "train_coverage": 97.68707482993197,
+    "train_overlap": 2.0,
+    "train_entropy": 0.23807727045246532,
+    "eval": {
+      "simple": {
+        "joint_reward": 931.9222028011258,
+        "coverage": 97.8494644165039,
+        "overlap": 1.2,
+        "entropy": 0.35091429408004515
+      },
+      "mixed": {
+        "joint_reward": 920.2142793310256,
+        "coverage": 97.85713958740234,
+        "overlap": 0.8,
+        "entropy": 0.1733366121676107
+      },
+      "bottleneck": {
+        "joint_reward": -12735.508592414852,
+        "coverage": 95.23809051513672,
+        "overlap": 0.2,
+        "entropy": 0.49266359351316796
+      },
+      "mean": {
+        "joint_reward": -3627.7907034275668,
+        "coverage": 96.98156483968098,
+        "overlap": 0.7333333333333334,
+        "entropy": 0.33897149992027464
+      }
+    },
+    "actor_loss": -0.0015538179577561095,
+    "critic_loss": 0.07350392523221672,
+    "entropy": 0.22174103278666735,
+    "ent_coef": 0.003
+  },
+  {
+    "update": 800,
+    "train_joint_reward": 821.8272375924247,
+    "train_coverage": 97.70408163265307,
+    "train_overlap": 1.5857142857142856,
+    "train_entropy": 0.23639069593378476,
+    "eval": {
+      "simple": {
+        "joint_reward": 919.250353251104,
+        "coverage": 97.8494644165039,
+        "overlap": 2.4,
+        "entropy": 0.36907026601665704
+      },
+      "mixed": {
+        "joint_reward": 1073.4498533257984,
+        "coverage": 97.6190414428711,
+        "overlap": 0.6,
+        "entropy": 0.1890883963195541
+      },
+      "bottleneck": {
+        "joint_reward": -12927.068035799633,
+        "coverage": 95.23809051513672,
+        "overlap": 0.6,
+        "entropy": 0.5182517045511907
+      },
+      "mean": {
+        "joint_reward": -3644.789276407577,
+        "coverage": 96.9021987915039,
+        "overlap": 1.2,
+        "entropy": 0.35880345562913396
+      }
+    },
+    "actor_loss": -0.006064426677767187,
+    "critic_loss": 0.14105969131924212,
+    "entropy": 0.22908855928108096,
+    "ent_coef": 0.003
+  },
+  {
+    "update": 810,
+    "train_joint_reward": 843.6328147114187,
+    "train_coverage": 97.73982056590752,
+    "train_overlap": 1.855072463768116,
+    "train_entropy": 0.2392232795988304,
+    "eval": {
+      "simple": {
+        "joint_reward": 943.6038405860027,
+        "coverage": 97.8494644165039,
+        "overlap": 1.2,
+        "entropy": 0.36930379116516615
+      },
+      "mixed": {
+        "joint_reward": 933.538054519835,
+        "coverage": 97.6190414428711,
+        "overlap": 3.6,
+        "entropy": 0.18246159932791092
+      },
+      "bottleneck": {
+        "joint_reward": 80.03902788932037,
+        "coverage": 97.6190414428711,
+        "overlap": 0.2,
+        "entropy": 0.4247826880418846
+      },
+      "mean": {
+        "joint_reward": 652.393640998386,
+        "coverage": 97.6958491007487,
+        "overlap": 1.6666666666666667,
+        "entropy": 0.32551602617832054
+      }
+    },
+    "actor_loss": -0.0014898603403707966,
+    "critic_loss": 0.0744064743630588,
+    "entropy": 0.23079457227140665,
+    "ent_coef": 0.003
+  },
+  {
+    "update": 820,
+    "train_joint_reward": 895.6751736534966,
+    "train_coverage": 97.66865079365078,
+    "train_overlap": 2.361111111111111,
+    "train_entropy": 0.21525847560001743,
+    "eval": {
+      "simple": {
+        "joint_reward": 1040.7384254498636,
+        "coverage": 97.8494644165039,
+        "overlap": 0.6,
+        "entropy": 0.33937236773396073
+      },
+      "mixed": {
+        "joint_reward": 889.9961550891676,
+        "coverage": 97.85713195800781,
+        "overlap": 4.2,
+        "entropy": 0.18835419332438633
+      },
+      "bottleneck": {
+        "joint_reward": -226.2244756991453,
+        "coverage": 97.6190414428711,
+        "overlap": 1.2,
+        "entropy": 0.47111221770577505
+      },
+      "mean": {
+        "joint_reward": 568.1700349466286,
+        "coverage": 97.77521260579427,
+        "overlap": 2.0,
+        "entropy": 0.3329462595880407
+      }
+    },
+    "actor_loss": -0.0011334723239997402,
+    "critic_loss": 0.06156113708857447,
+    "entropy": 0.20939333317801356,
+    "ent_coef": 0.003
+  },
+  {
+    "update": 830,
+    "train_joint_reward": 895.1821802703428,
+    "train_coverage": 97.6861167002012,
+    "train_overlap": 1.352112676056338,
+    "train_entropy": 0.23188599870658258,
+    "eval": {
+      "simple": {
+        "joint_reward": 978.5884858068514,
+        "coverage": 98.06451416015625,
+        "overlap": 1.0,
+        "entropy": 0.34105723951617356
+      },
+      "mixed": {
+        "joint_reward": 1092.9702373295738,
+        "coverage": 97.85713958740234,
+        "overlap": 1.0,
+        "entropy": 0.15609892491058186
+      },
+      "bottleneck": {
+        "joint_reward": 23.64851286418864,
+        "coverage": 97.6190414428711,
+        "overlap": 5.0,
+        "entropy": 0.39016609721300427
+      },
+      "mean": {
+        "joint_reward": 698.4024120002045,
+        "coverage": 97.84689839680989,
+        "overlap": 2.3333333333333335,
+        "entropy": 0.2957740872132532
+      }
+    },
+    "actor_loss": -0.0008778307819738984,
+    "critic_loss": 0.0661240026820451,
+    "entropy": 0.22321593901142478,
+    "ent_coef": 0.003
+  },
+  {
+    "update": 840,
+    "train_joint_reward": 879.8133082735366,
+    "train_coverage": 97.70531400966183,
+    "train_overlap": 1.5942028985507246,
+    "train_entropy": 0.23820507191661475,
+    "eval": {
+      "simple": {
+        "joint_reward": 981.4737463413967,
+        "coverage": 97.8494644165039,
+        "overlap": 0.4,
+        "entropy": 0.3840576308906393
+      },
+      "mixed": {
+        "joint_reward": 992.636783152989,
+        "coverage": 97.6190414428711,
+        "overlap": 3.6,
+        "entropy": 0.16612135337768072
+      },
+      "bottleneck": {
+        "joint_reward": -13039.906978440868,
+        "coverage": 95.0,
+        "overlap": 0.6,
+        "entropy": 0.5068419176589355
+      },
+      "mean": {
+        "joint_reward": -3688.598816315494,
+        "coverage": 96.82283528645833,
+        "overlap": 1.5333333333333332,
+        "entropy": 0.35234030064241856
+      }
+    },
+    "actor_loss": -0.0005950274789938703,
+    "critic_loss": 0.06917388818692416,
+    "entropy": 0.22627219883725047,
+    "ent_coef": 0.003
+  },
+  {
+    "update": 850,
+    "train_joint_reward": 753.3986669428208,
+    "train_coverage": 97.67156862745097,
+    "train_overlap": 2.1470588235294117,
+    "train_entropy": 0.24714835152468262,
+    "eval": {
+      "simple": {
+        "joint_reward": 920.3211727940507,
+        "coverage": 97.8494644165039,
+        "overlap": 4.2,
+        "entropy": 0.3414978718374222
+      },
+      "mixed": {
+        "joint_reward": 1111.193093565078,
+        "coverage": 97.85713958740234,
+        "overlap": 0.8,
+        "entropy": 0.16057176379809018
+      },
+      "bottleneck": {
+        "joint_reward": -12856.13256098417,
+        "coverage": 95.0,
+        "overlap": 0.6,
+        "entropy": 0.4947878464411282
+      },
+      "mean": {
+        "joint_reward": -3608.206098208347,
+        "coverage": 96.90220133463542,
+        "overlap": 1.8666666666666665,
+        "entropy": 0.3322858273588802
+      }
+    },
+    "actor_loss": -0.006172445995616727,
+    "critic_loss": 0.24630365427583456,
+    "entropy": 0.24346923828125,
+    "ent_coef": 0.003
+  },
+  {
+    "update": 854,
+    "train_joint_reward": 921.9433823706398,
+    "train_coverage": 97.6861167002012,
+    "train_overlap": 0.7887323943661971,
+    "train_entropy": 0.21631152382199192,
+    "eval": {
+      "simple": {
+        "joint_reward": 976.1154594029977,
+        "coverage": 97.8494644165039,
+        "overlap": 2.0,
+        "entropy": 0.34504716463241186
+      },
+      "mixed": {
+        "joint_reward": 1042.616758147951,
+        "coverage": 97.85713958740234,
+        "overlap": 1.6,
+        "entropy": 0.1783308707592686
+      },
+      "bottleneck": {
+        "joint_reward": -263.34117285765603,
+        "coverage": 97.6190414428711,
+        "overlap": 0.2,
+        "entropy": 0.4631423049665786
+      },
+      "mean": {
+        "joint_reward": 585.1303482310976,
+        "coverage": 97.77521514892578,
+        "overlap": 1.2666666666666668,
+        "entropy": 0.32884011345275305
+      }
+    },
+    "actor_loss": -6.272431346587837e-05,
+    "critic_loss": 0.07358602387830615,
+    "entropy": 0.21347810653969646,
+    "ent_coef": 0.003
+  }
+]

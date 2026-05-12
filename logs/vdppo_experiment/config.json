@@ -1,0 +1,45 @@
+{
+  "timestamp": "2026-05-11T18:06:12.933578",
+  "architecture": "VDPPO (Value-Decomposed PPO, CTDE)",
+  "MASTER_SEED": 42,
+  "DEVICE": "cpu",
+  "BACKUP_DIR": "/kaggle/working/checkpoints_vdppo_opt",
+  "MAP_PATHS": {
+    "simple": "/kaggle/working/maps/map_simple.json",
+    "mixed": "/kaggle/working/maps/map_mixed.json",
+    "bottleneck": "/kaggle/working/maps/map_bottleneck.json"
+  },
+  "RewardConfig": {
+    "EXPLORE_REWARD": 5.0,
+    "OBSTACLE_PENALTY": 2.0,
+    "COVERAGE_SCALE": 3.0,
+    "FRONTIER_SCALE": 1.5,
+    "REVISIT_MULT": 1.5,
+    "REVISIT_CAP": 35.0,
+    "BFS_SCALE": 1.0,
+    "STEP_PENALTY": 1.5,
+    "COMPLETE_BONUS": 100.0,
+    "PARTIAL_SCALE": 20.0,
+    "PASSAGE_BONUS": 3.0,
+    "COLLISION_PENALTY": 25.0,
+    "OVERLAP_PENALTY": 12.0,
+    "TEAM_ALPHA": 2.5
+  },
+  "trainer_kwargs": {
+    "total_steps": 3500000,
+    "rollout_len": 512,
+    "n_envs": 8,
+    "n_epochs": 8,
+    "minibatch_size": 1024,
+    "gamma": 0.995,
+    "gae_lambda": 0.97,
+    "clip_range": 0.2,
+    "lr_actor": 0.0002,
+    "lr_critic": 0.0006000000000000001,
+    "ent_coef": 0.003,
+    "ent_coef_min": 0.003,
+    "ent_decay": 1.0,
+    "value_coef": 0.5,
+    "max_grad_norm": 0.5
+  }
+}
