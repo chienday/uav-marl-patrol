@@ -322,13 +322,7 @@ pip install -r requirements.txt
 ```
 
 ### Chạy trên Kaggle
-
-| Thuật toán | Liên kết Kaggle |
-|-----------|----------------|
-| PPO | https://www.kaggle.com/code/chienday/uav-rl-final |
-| IPPO | https://www.kaggle.com/code/chienday/ippo-final |
-| MAPPO | https://www.kaggle.com/code/chienday/mappo-final |
-| VDPPO | https://www.kaggle.com/code/chienday/vdppo-final |
+Trong thư mục notebooks có file ipynb tương ứng
 
 ### Chạy cục bộ (sử dụng module src)
 Tạo file mới ví dụ 
