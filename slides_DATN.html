@@ -1,0 +1,841 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DATN: Tuần Tra UAV bằng MARL — Lê Đức Chiến — 2026</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.6.0/dist/reset.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.6.0/dist/reveal.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.6.0/dist/theme/white.css">
+<style>
+:root {
+  --navy: #1e3a5f;
+  --blue: #2563eb;
+  --sky:  #0ea5e9;
+  --green:#16a34a;
+  --amber:#d97706;
+  --red:  #dc2626;
+  --gray: #64748b;
+  --light:#f0f4f8;
+}
+.reveal { font-family:'Segoe UI',Arial,sans-serif; }
+.reveal h1 { font-size:1.9em; color:var(--navy); font-weight:800; margin-bottom:.3em; }
+.reveal h2 { font-size:1.35em; color:var(--navy); font-weight:700; border-bottom:3px solid var(--blue); padding-bottom:.15em; margin-bottom:.5em; }
+.reveal h3 { font-size:1.05em; color:var(--blue); margin:.3em 0 .2em; }
+.reveal ul  { list-style:none; padding-left:0; margin:.2em 0; }
+.reveal ul li::before { content:"▸ "; color:var(--blue); }
+.reveal ul li { margin-bottom:.25em; font-size:.82em; }
+.reveal table { width:100%; border-collapse:collapse; font-size:.75em; }
+.reveal table th { background:var(--navy); color:#fff; padding:.4em .6em; text-align:center; }
+.reveal table td { padding:.35em .6em; border:1px solid #d1d5db; text-align:center; }
+.reveal table tr:nth-child(even) td { background:#f8fafc; }
+
+.cols2 { display:grid; grid-template-columns:1fr 1fr; gap:1em; }
+.cols3 { display:grid; grid-template-columns:1fr 1fr 1fr; gap:.7em; }
+
+.box { border-radius:6px; padding:.5em .8em; margin:.3em 0; font-size:.78em; line-height:1.4; }
+.box-b { background:#dbeafe; border-left:5px solid var(--blue); }
+.box-g { background:#dcfce7; border-left:5px solid var(--green); }
+.box-a { background:#fef3c7; border-left:5px solid var(--amber); }
+.box-r { background:#fee2e2; border-left:5px solid var(--red); }
+
+.metric { background:#fff; border:2px solid var(--blue); border-radius:8px; padding:.5em; text-align:center; }
+.metric .val { font-size:1.7em; font-weight:900; color:var(--green); line-height:1.1; }
+.metric .lab { font-size:.55em; color:var(--gray); }
+
+.tag { display:inline-block; padding:.1em .45em; border-radius:999px; font-size:.7em; font-weight:700; vertical-align:middle; }
+.tag-g { background:#bbf7d0; color:#15803d; }
+.tag-r { background:#fecaca; color:#991b1b; }
+.tag-a { background:#fde68a; color:#92400e; }
+
+.card { border:2px solid; border-radius:8px; padding:.6em .8em; }
+.card-b { border-color:var(--blue); background:#eff6ff; }
+.card-g { border-color:var(--green); background:#f0fdf4; }
+.card-a { border-color:var(--amber); background:#fffbeb; }
+
+.tc-g { color:var(--green); font-weight:700; }
+.tc-r { color:var(--red); font-weight:700; }
+
+code { font-family:'Courier New',monospace; background:#f1f5f9; padding:.1em .35em; border-radius:4px; font-size:.85em; }
+.codeblock { background:#1e293b; color:#e2e8f0; border-radius:8px; padding:.6em .9em; font-family:'Courier New',monospace; font-size:.7em; line-height:1.5; text-align:left; }
+.codeblock .kw  { color:#60a5fa; }
+.codeblock .cm  { color:#94a3b8; }
+.codeblock .str { color:#a3e635; }
+</style>
+</head>
+<body>
+<div class="reveal"><div class="slides">
+
+<!-- ═══════════════════════════════════════════════════════════
+     SLIDE 1 — TITLE
+═══════════════════════════════════════════════════════════ -->
+<section data-background-gradient="linear-gradient(135deg,#1e3a5f 0%,#1d4ed8 65%,#0ea5e9 100%)" style="text-align:center;">
+  <p style="font-size:.55em;color:rgba(255,255,255,.75);margin-bottom:.4em;">
+    Đại học Thuỷ Lợi &nbsp;·&nbsp; Khoa CNTT &nbsp;·&nbsp; Đồ Án Tốt Nghiệp 2026
+  </p>
+  <h1 style="color:#fff;font-size:1.55em;line-height:1.25;">
+    TUẦN TRA ĐÔ THỊ BẰNG ĐỘI UAV<br>
+    SỬ DỤNG HỌC TĂNG CƯỜNG ĐA TÁC TỬ
+  </h1>
+  <p style="color:rgba(255,255,255,.8);font-size:.72em;margin:.5em 0 1.2em;">
+    Multi-Agent Reinforcement Learning (MARL) for Urban UAV Patrol Coverage
+  </p>
+  <div style="font-size:.7em;color:rgba(255,255,255,.9);">
+    <strong>Sinh viên:</strong> Lê Đức Chiến &nbsp;|&nbsp; MSSV: 2251172253 &nbsp;|&nbsp; 64KTPM3<br>
+    <strong>GVHD:</strong> [Tên Giáo Viên Hướng Dẫn] &nbsp;|&nbsp; Tháng 6, 2026
+  </div>
+  <div style="margin-top:1.2em;background:rgba(255,255,255,.15);border-radius:8px;padding:.6em 1em;display:inline-block;font-size:.65em;color:#fff;">
+    ★ Kết quả: <strong>VDPPO đạt 97.8% coverage</strong> với 2 UAV — vượt PPO đơn tác tử (96.7%)
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════
+     SLIDE 2 — AGENDA
+═══════════════════════════════════════════════════════════ -->
+<section>
+  <h2>Nội dung trình bày</h2>
+  <div style="margin-top:.7em;display:grid;grid-template-columns:auto 1fr;gap:.45em 1em;font-size:.82em;align-items:center;">
+    <div style="background:var(--blue);color:#fff;width:2em;height:2em;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:.9em;">1</div>
+    <div style="background:var(--light);border-radius:6px;padding:.4em .8em;"><strong>Đặt vấn đề &amp; Mục tiêu</strong> — Tại sao UAV? Tại sao MARL?</div>
+
+    <div style="background:var(--blue);color:#fff;width:2em;height:2em;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:.9em;">2</div>
+    <div style="background:var(--light);border-radius:6px;padding:.4em .8em;"><strong>Cơ sở lý thuyết</strong> — RL, PPO, MARL, CTDE, Value Decomposition</div>
+
+    <div style="background:var(--blue);color:#fff;width:2em;height:2em;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:.9em;">3</div>
+    <div style="background:var(--light);border-radius:6px;padding:.4em .8em;"><strong>Thiết kế hệ thống</strong> — Môi trường, Kiến trúc VDPPO, Hàm thưởng</div>
+
+    <div style="background:var(--blue);color:#fff;width:2em;height:2em;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:.9em;">4</div>
+    <div style="background:var(--light);border-radius:6px;padding:.4em .8em;"><strong>Kết quả &amp; Phân tích</strong> — So sánh PPO / IPPO / MAPPO / VDPPO</div>
+
+    <div style="background:var(--blue);color:#fff;width:2em;height:2em;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:.9em;">5</div>
+    <div style="background:var(--light);border-radius:6px;padding:.4em .8em;"><strong>Kết luận &amp; Hướng phát triển</strong></div>
+  </div>
+  <p style="font-size:.58em;color:var(--gray);text-align:right;margin-top:.8em;">Tổng thời gian trình bày: ~15 phút</p>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════
+     SECTION SEPARATOR 1
+═══════════════════════════════════════════════════════════ -->
+<section data-background-color="#1e3a5f" style="text-align:center;">
+  <p style="color:rgba(255,255,255,.5);font-size:.7em;margin-bottom:.3em;">Phần 1</p>
+  <h2 style="color:#fff;border-bottom:3px solid var(--sky);display:inline-block;padding-bottom:.2em;">Đặt vấn đề &amp; Mục tiêu</h2>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════
+     SLIDE 3 — BÀI TOÁN
+═══════════════════════════════════════════════════════════ -->
+<section>
+  <h2>Bài toán tuần tra đô thị bằng UAV</h2>
+  <div class="cols2" style="margin-top:.5em;">
+    <div>
+      <div class="box box-b">
+        <strong>Coverage Path Planning (CPP)</strong><br>
+        UAV phải bao phủ <em>toàn bộ</em> vùng không gian trong số bước tối thiểu, tránh va chạm và chướng ngại vật.
+      </div>
+      <ul style="margin-top:.5em;">
+        <li>Ứng dụng: giám sát, tìm kiếm-cứu nạn, an ninh</li>
+        <li>1 UAV: đã có lời giải tốt — PPO đạt <strong>96.7%</strong></li>
+        <li>Nhiều UAV: phức tạp hơn rất nhiều lần</li>
+      </ul>
+      <div class="box box-r" style="margin-top:.5em;">
+        <strong>Thách thức khi có nhiều UAV:</strong><br>
+        → Làm sao tránh đi trùng vùng nhau?<br>
+        → Làm sao phối hợp không va chạm?<br>
+        → Học phân tán nhưng phối hợp hiệu quả?
+      </div>
+    </div>
+    <div style="text-align:center;">
+      <div style="font-family:'Courier New',monospace;font-size:.62em;background:#1e293b;color:#e2e8f0;padding:.8em;border-radius:8px;text-align:left;display:inline-block;line-height:1.5;">
+<pre style="margin:0;">  Bản đồ 10×10 — Map Mixed
+
+   0 1 2 3 4 5 6 7 8 9
+ 0[S . . . . . . . . .]
+ 1[. ■ ■ ■ ■ ■ ■ ■ ■ .]
+ 2[. . . . . . . . . .]
+ 3[. . ■ ■ ■ ■ ■ . . .]
+ 4[. . . . . . . . . .]
+ 5[■ ■ ■ ■ . ■ ■ ■ ■ ■]
+ 6[. . . . . . . . . .]
+ 7[. . . . . ■ ■ . . .]
+ 8[. . . . . ■ . . . .]
+ 9[. . . . . . . . . .]
+
+ S=Start  ■=Obstacle  .=Free cell</pre>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════
+     SLIDE 4 — MỤC TIÊU
+═══════════════════════════════════════════════════════════ -->
+<section>
+  <h2>Mục tiêu &amp; Phát biểu bài toán</h2>
+  <div class="cols2" style="margin-top:.5em;">
+    <div>
+      <div class="box box-b">
+        <strong>Mục tiêu chính:</strong> Phát triển hệ thống MARL điều khiển 2 UAV tuần tra đô thị đạt coverage tối đa.
+      </div>
+      <div style="margin-top:.5em;font-size:.78em;">
+        <strong>Bài toán — Dec-POMDP:</strong><br>
+        <code style="font-size:.9em;">&lt;I, S, A, T, R, Ω, O, γ&gt;</code>
+      </div>
+      <table style="margin-top:.4em;font-size:.68em;">
+        <tr><th>Ký hiệu</th><th>Giá trị</th></tr>
+        <tr><td><em>I = {1, 2}</em></td><td>2 UAV (agent)</td></tr>
+        <tr><td><em>A = {↑↓←→}</em></td><td>4 hành động</td></tr>
+        <tr><td><em>Ω_i</em></td><td>Quan sát cục bộ 248-dim</td></tr>
+        <tr><td><em>γ = 0.995</em></td><td>Hệ số chiết khấu</td></tr>
+        <tr><td><em>Metric</em></td><td>Coverage = ô thăm / ô tự do</td></tr>
+      </table>
+    </div>
+    <div>
+      <strong style="font-size:.82em;">Thuật toán so sánh:</strong>
+      <div style="margin-top:.4em;font-size:.78em;display:grid;gap:.4em;">
+        <div style="background:#f0f4f8;border-radius:6px;padding:.4em .7em;">
+          <strong>PPO</strong> — 1 UAV, baseline đơn tác tử
+        </div>
+        <div style="background:#fef3c7;border-radius:6px;padding:.4em .7em;">
+          <strong>IPPO</strong> — 2 UAV độc lập, không chia sẻ
+        </div>
+        <div style="background:#dbeafe;border-radius:6px;padding:.4em .7em;">
+          <strong>MAPPO</strong> — CTDE, SharedActor + CentralCritic
+        </div>
+        <div style="background:#dcfce7;border-radius:6px;padding:.4em .7em;">
+          <strong>VDPPO ★</strong> — MAPPO + Value Decomposition (đề xuất)
+        </div>
+      </div>
+      <div style="margin-top:.5em;">
+        <div class="cols3" style="gap:.4em;">
+          <div class="metric"><div class="val">97.8%</div><div class="lab">VDPPO (TB)</div></div>
+          <div class="metric"><div class="val">3.5M</div><div class="lab">Bước train</div></div>
+          <div class="metric"><div class="val">3 maps</div><div class="lab">Thực nghiệm</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════
+     SECTION SEPARATOR 2
+═══════════════════════════════════════════════════════════ -->
+<section data-background-color="#1e3a5f" style="text-align:center;">
+  <p style="color:rgba(255,255,255,.5);font-size:.7em;margin-bottom:.3em;">Phần 2</p>
+  <h2 style="color:#fff;border-bottom:3px solid var(--sky);display:inline-block;padding-bottom:.2em;">Cơ sở lý thuyết</h2>
+  <p style="color:rgba(255,255,255,.7);font-size:.7em;margin-top:.5em;">RL → PPO → MARL → CTDE → VDPPO</p>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════
+     SLIDE 5 — RL & PPO
+═══════════════════════════════════════════════════════════ -->
+<section>
+  <h2>Học Tăng Cường &amp; PPO</h2>
+  <div class="cols2" style="margin-top:.5em;">
+    <div>
+      <div class="box box-b" style="font-size:.78em;">
+        <strong>Vòng lặp RL:</strong><br>
+        Agent → Hành động → Môi trường → Phần thưởng r → Cập nhật π
+      </div>
+      <ul>
+        <li><strong>Policy π(a|s)</strong>: xác suất chọn hành động <em>a</em> tại <em>s</em></li>
+        <li><strong>Value V(s)</strong>: kỳ vọng tổng thưởng từ <em>s</em></li>
+        <li><strong>Advantage Â_t</strong>: hành động tốt hơn trung bình bao nhiêu</li>
+        <li><strong>GAE</strong>: ước lượng Â_t mượt hơn với λ=0.97</li>
+      </ul>
+      <div class="box box-g" style="margin-top:.5em;font-size:.76em;">
+        <strong>Tại sao PPO?</strong> On-policy, ổn định, dễ song song hóa, vượt A3C và TRPO
+      </div>
+    </div>
+    <div>
+      <div class="codeblock">
+        <span class="cm"># PPO Clipped Objective:</span><br>
+        r_t = π(a|s) / π_old(a|s)<br><br>
+        L = E[<span class="kw">min</span>(<br>
+        &nbsp;&nbsp;r_t · Â_t,<br>
+        &nbsp;&nbsp;<span class="kw">clip</span>(r_t, 1-ε, 1+ε) · Â_t<br>
+        )]<br><br>
+        <span class="cm"># Giới hạn bước cập nhật:</span><br>
+        <span class="str">ε = 0.2</span> <span class="cm">← không cập nhật quá xa</span>
+      </div>
+      <div class="box box-a" style="font-size:.75em;margin-top:.4em;">
+        Nếu <code>r_t</code> vượt ngưỡng [0.8, 1.2] → gradient bị clip → policy thay đổi có kiểm soát
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════
+     SLIDE 6 — MARL 3 MÔ HÌNH
+═══════════════════════════════════════════════════════════ -->
+<section>
+  <h2>MARL — Ba mô hình huấn luyện</h2>
+  <div class="cols3" style="margin-top:.6em;font-size:.82em;">
+
+    <div class="card card-a">
+      <h3 style="color:var(--amber);">IPPO</h3>
+      <p style="font-size:.8em;color:var(--gray);margin:.1em 0 .4em;">Độc lập — đơn giản nhất</p>
+      <ul>
+        <li>Mỗi agent học riêng biệt</li>
+        <li>Không chia sẻ thông tin</li>
+        <li>Môi trường "phi tĩnh"</li>
+        <li>Dễ implement</li>
+      </ul>
+      <div class="box box-r" style="margin-top:.5em;font-size:.82em;">
+        ✗ Coordination Gap 22%
+      </div>
+    </div>
+
+    <div class="card card-b">
+      <h3 style="color:var(--blue);">MAPPO</h3>
+      <p style="font-size:.8em;color:var(--gray);margin:.1em 0 .4em;">CTDE — Train tập trung</p>
+      <ul>
+        <li>Critic: dùng global state</li>
+        <li>Actor: dùng local obs</li>
+        <li>Deploy hoàn toàn phân tán</li>
+        <li>SharedActor cho cả 2 UAV</li>
+      </ul>
+      <div class="box box-a" style="margin-top:.5em;font-size:.82em;">
+        ✗ Thất bại map Mixed 68%
+      </div>
+    </div>
+
+    <div class="card card-g">
+      <h3 style="color:var(--green);">VDPPO ★</h3>
+      <p style="font-size:.8em;color:var(--gray);margin:.1em 0 .4em;">CTDE + Value Decomp</p>
+      <ul>
+        <li>V_total = V_team + V_agent_i</li>
+        <li>Gán credit từng agent</li>
+        <li>Adaptive Entropy</li>
+        <li>Diversity Reward</li>
+      </ul>
+      <div class="box box-g" style="margin-top:.5em;font-size:.82em;">
+        ✓ 97.8% trên cả 3 bản đồ
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════
+     SECTION SEPARATOR 3
+═══════════════════════════════════════════════════════════ -->
+<section data-background-color="#1e3a5f" style="text-align:center;">
+  <p style="color:rgba(255,255,255,.5);font-size:.7em;margin-bottom:.3em;">Phần 3</p>
+  <h2 style="color:#fff;border-bottom:3px solid var(--sky);display:inline-block;padding-bottom:.2em;">Thiết kế hệ thống</h2>
+  <p style="color:rgba(255,255,255,.7);font-size:.7em;margin-top:.5em;">Môi trường · Kiến trúc VDPPO · Hàm thưởng</p>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════
+     SLIDE 7 — KIẾN TRÚC VDPPO
+═══════════════════════════════════════════════════════════ -->
+<section>
+  <h2>Kiến trúc VDPPO — CTDE</h2>
+  <div style="margin-top:.5em;font-size:.78em;">
+
+    <!-- Training phase -->
+    <div style="text-align:center;color:var(--gray);font-size:.82em;font-weight:700;margin-bottom:.4em;">
+      ─── HUẤN LUYỆN (Centralized Training) ───
+    </div>
+    <div style="display:flex;justify-content:center;align-items:center;gap:.8em;flex-wrap:wrap;">
+      <div style="background:#fef3c7;border:2px solid var(--amber);border-radius:6px;padding:.4em .8em;text-align:center;min-width:130px;">
+        <strong>Global State</strong><br>
+        <span style="color:var(--gray);font-size:.85em;">304-dim</span><br>
+        <span style="font-size:.78em;">coverage 100 + obstacles 100<br>+ visit_count 100 + pos 4</span>
+      </div>
+      <span style="font-size:1.4em;color:var(--navy);">→</span>
+      <div style="background:#dbeafe;border:2px solid var(--blue);border-radius:6px;padding:.4em .8em;text-align:center;min-width:130px;">
+        <strong>CentralCritic</strong><br>
+        <span style="color:var(--gray);font-size:.85em;">304→256→128→1</span><br>
+        <span style="font-size:.78em;">Tanh · V<sub>team</sub></span>
+      </div>
+      <span style="font-size:1.4em;color:var(--navy);">→</span>
+      <div style="background:#dcfce7;border:2px solid var(--green);border-radius:6px;padding:.4em .8em;text-align:center;min-width:150px;">
+        <strong>AgentValueHead × 2</strong><br>
+        <span style="color:var(--gray);font-size:.85em;">256→128→1</span><br>
+        <span style="font-size:.78em;">ReLU · V<sub>agent₀</sub>, V<sub>agent₁</sub></span>
+      </div>
+    </div>
+
+    <!-- Value Decomp formula -->
+    <div style="text-align:center;margin:.6em 0;background:#f0fdf4;border:2px solid var(--green);border-radius:8px;padding:.5em 1em;font-size:.88em;">
+      <strong>V<sub>total</sub> = V<sub>team</sub> + mean(V<sub>agent₀</sub> + V<sub>agent₁</sub>)</strong>
+      <span style="color:var(--gray);font-size:.85em;margin-left:.6em;">← Credit Assignment per Agent</span>
+    </div>
+
+    <!-- Deployment phase -->
+    <div style="text-align:center;color:var(--gray);font-size:.82em;font-weight:700;margin:.4em 0 .3em;">
+      ─── TRIỂN KHAI (Decentralized Execution) ───
+    </div>
+    <div style="display:flex;justify-content:center;">
+      <div style="background:#f5f0ff;border:2px solid #7c3aed;border-radius:6px;padding:.4em 1.2em;text-align:center;">
+        <strong>SharedActor</strong> &nbsp;|&nbsp; <span style="color:var(--gray);font-size:.9em;">248→256→128→4</span><br>
+        <span style="font-size:.8em;">Local obs 9×9 window · Tanh · Softmax(4 hành động)</span><br>
+        <span style="font-size:.75em;color:var(--gray);">Cùng một Actor weight cho cả 2 UAV</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════
+     SLIDE 8 — OBS & REWARD
+═══════════════════════════════════════════════════════════ -->
+<section>
+  <h2>Không gian quan sát &amp; Hàm thưởng</h2>
+  <div class="cols2" style="margin-top:.5em;">
+    <div>
+      <strong style="font-size:.82em;">Không gian quan sát (248-dim):</strong>
+      <table style="margin-top:.3em;font-size:.68em;">
+        <tr><th>Thành phần</th><th>Chiều</th></tr>
+        <tr><td>Coverage map cửa sổ 9×9</td><td>81</td></tr>
+        <tr><td>Obstacle map cửa sổ 9×9</td><td>81</td></tr>
+        <tr><td>Visit count cửa sổ 9×9</td><td>81</td></tr>
+        <tr><td>Vị trí agent (x, y)</td><td>2</td></tr>
+        <tr><td>Vị trí agent khác (x, y)</td><td>2</td></tr>
+        <tr><td>BFS frontier distance</td><td>1</td></tr>
+        <tr><td><strong>Tổng</strong></td><td><strong>248</strong></td></tr>
+      </table>
+      <div class="box box-b" style="font-size:.72em;margin-top:.4em;">
+        <strong>BFS frontier</strong>: khoảng cách đến ô tự do gần nhất chưa thăm — dẫn đường agent khám phá hiệu quả
+      </div>
+    </div>
+    <div>
+      <strong style="font-size:.82em;">Hàm thưởng (14 thành phần):</strong>
+      <ul style="margin-top:.3em;font-size:.72em;">
+        <li><span class="tag tag-g">+1.0</span> Khám phá ô mới</li>
+        <li><span class="tag tag-g">+0.5</span> Tiếp cận ô frontier</li>
+        <li><span class="tag tag-g">+10</span> Milestone 50% / 80% / 95%</li>
+        <li><span class="tag tag-r">−5.0</span> Va chạm (3 loại: head-on, cross, overlap)</li>
+        <li><span class="tag tag-r">−0.1</span> Đứng yên (không di chuyển)</li>
+        <li><span class="tag tag-r">−0.3</span> Thăm lại ô đã thăm</li>
+        <li><span class="tag tag-a">Đa dạng</span> +0.5 nếu Manhattan dist > 2, −0.3 nếu ≤ 2</li>
+        <li style="color:var(--gray);">… (+7 thành phần tinh chỉnh khác)</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════
+     SECTION SEPARATOR 4
+═══════════════════════════════════════════════════════════ -->
+<section data-background-color="#1e3a5f" style="text-align:center;">
+  <p style="color:rgba(255,255,255,.5);font-size:.7em;margin-bottom:.3em;">Phần 4</p>
+  <h2 style="color:#fff;border-bottom:3px solid var(--sky);display:inline-block;padding-bottom:.2em;">Kết quả &amp; Phân tích</h2>
+  <p style="color:rgba(255,255,255,.7);font-size:.7em;margin-top:.5em;">PPO · IPPO · MAPPO · VDPPO — 3 bản đồ</p>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════
+     SLIDE 9 — KẾT QUẢ BẢNG
+═══════════════════════════════════════════════════════════ -->
+<section>
+  <h2>Kết quả tổng quan — Coverage (%)</h2>
+  <table style="margin-top:.6em;font-size:.8em;">
+    <tr>
+      <th>Thuật toán</th><th>UAV</th><th>Bước train</th>
+      <th>Simple</th><th>Mixed</th><th>Bottleneck</th><th>TB</th><th>Std (last 5)</th>
+    </tr>
+    <tr>
+      <td>PPO</td><td>1</td><td>10M</td>
+      <td>94.6%</td><td>97.8%</td><td>97.8%</td><td>96.7%</td><td>—</td>
+    </tr>
+    <tr>
+      <td>IPPO</td><td>2</td><td>6M</td>
+      <td class="tc-r">75.8%</td><td class="tc-r">65.6%</td><td class="tc-r">67.5%</td><td class="tc-r">69.6%</td><td>—</td>
+    </tr>
+    <tr>
+      <td>MAPPO</td><td>2</td><td>~4M</td>
+      <td>95.7%</td><td class="tc-r">68.1% ✗</td><td>97.9%</td><td>87.2%</td><td class="tc-r">±4.5%</td>
+    </tr>
+    <tr style="background:#f0fdf4;font-weight:700;">
+      <td>VDPPO ★</td><td>2</td><td>3.5M</td>
+      <td class="tc-g">97.8%</td><td class="tc-g">97.9% ✓</td><td class="tc-g">97.6%</td><td class="tc-g">97.8%</td><td class="tc-g">±0.31%</td>
+    </tr>
+  </table>
+  <div class="cols3" style="margin-top:.7em;font-size:.76em;gap:.5em;">
+    <div class="box box-r" style="font-size:.9em;">IPPO: <strong>Coordination Gap ~22%</strong><br>Cá nhân 91% nhưng chung 69%</div>
+    <div class="box box-a" style="font-size:.9em;">MAPPO: thất bại Mixed<br>Không gán credit cá nhân</div>
+    <div class="box box-g" style="font-size:.9em;">VDPPO std <strong>14.5× thấp hơn</strong> MAPPO<br>Hội tụ thực sự, không dao động</div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════
+     SLIDE 10 — BAR CHART SVG
+═══════════════════════════════════════════════════════════ -->
+<section>
+  <h2>Biểu đồ so sánh coverage theo bản đồ</h2>
+  <!-- Y: 60→100%, height 240px, top=40, bottom=280, scale=6px/% -->
+  <!-- Groups: Simple(x≈88), Mixed(x≈243), Bottleneck(x≈398), TB(x≈553) -->
+  <!-- Bars per group: PPO, IPPO, MAPPO, VDPPO, width=28, gap=4 -->
+  <svg viewBox="0 0 720 340" style="width:100%;max-height:265px;" xmlns="http://www.w3.org/2000/svg">
+    <rect width="720" height="340" fill="#fafafa" rx="8"/>
+    <!-- Y axis -->
+    <line x1="70" y1="40" x2="70" y2="282" stroke="#374151" stroke-width="2"/>
+    <!-- X axis -->
+    <line x1="70" y1="282" x2="710" y2="282" stroke="#374151" stroke-width="2"/>
+    <!-- Grid + Y labels (60,70,80,90,100) -->
+    <line x1="70" y1="282" x2="710" y2="282" stroke="#e5e7eb" stroke-dasharray="4,4"/>
+    <text x="62" y="286" text-anchor="end" font-size="11" fill="#6b7280">60%</text>
+    <line x1="70" y1="222" x2="710" y2="222" stroke="#e5e7eb" stroke-dasharray="4,4"/>
+    <text x="62" y="226" text-anchor="end" font-size="11" fill="#6b7280">70%</text>
+    <line x1="70" y1="162" x2="710" y2="162" stroke="#e5e7eb" stroke-dasharray="4,4"/>
+    <text x="62" y="166" text-anchor="end" font-size="11" fill="#6b7280">80%</text>
+    <line x1="70" y1="102" x2="710" y2="102" stroke="#e5e7eb" stroke-dasharray="4,4"/>
+    <text x="62" y="106" text-anchor="end" font-size="11" fill="#6b7280">90%</text>
+    <line x1="70" y1="42"  x2="710" y2="42"  stroke="#e5e7eb" stroke-dasharray="4,4"/>
+    <text x="62" y="46"   text-anchor="end" font-size="11" fill="#6b7280">100%</text>
+
+    <!-- helper: h(v)=(v-60)*6, y(v)=282-h(v) -->
+
+    <!-- GROUP 1 — Simple -->
+    <!-- PPO 94.6: h=207.6≈208,y=74 -->
+    <rect x="88"  y="74"  width="28" height="208" fill="#60a5fa" rx="3"/>
+    <text x="102" y="70"  text-anchor="middle" font-size="9" fill="#1e40af">94.6</text>
+    <!-- IPPO 75.8: h=94.8≈95,y=187 -->
+    <rect x="120" y="187" width="28" height="95"  fill="#f59e0b" rx="3"/>
+    <text x="134" y="183" text-anchor="middle" font-size="9" fill="#78350f">75.8</text>
+    <!-- MAPPO 95.7: h=214.2≈214,y=68 -->
+    <rect x="152" y="68"  width="28" height="214" fill="#f97316" rx="3"/>
+    <text x="166" y="64"  text-anchor="middle" font-size="9" fill="#7c2d12">95.7</text>
+    <!-- VDPPO 97.8: h=226.8≈227,y=55 -->
+    <rect x="184" y="55"  width="28" height="227" fill="#16a34a" rx="3"/>
+    <text x="198" y="51"  text-anchor="middle" font-size="9" fill="#14532d">97.8</text>
+    <text x="152" y="300" text-anchor="middle" font-size="12" fill="#374151" font-weight="bold">Simple</text>
+
+    <!-- GROUP 2 — Mixed -->
+    <!-- PPO 97.8: h=227,y=55 -->
+    <rect x="243" y="55"  width="28" height="227" fill="#60a5fa" rx="3"/>
+    <text x="257" y="51"  text-anchor="middle" font-size="9" fill="#1e40af">97.8</text>
+    <!-- IPPO 65.6: h=33.6≈34,y=248 -->
+    <rect x="275" y="248" width="28" height="34"  fill="#f59e0b" rx="3"/>
+    <text x="289" y="244" text-anchor="middle" font-size="9" fill="#78350f">65.6</text>
+    <!-- MAPPO 68.1: h=48.6≈49,y=233 -->
+    <rect x="307" y="233" width="28" height="49"  fill="#f97316" rx="3"/>
+    <text x="321" y="229" text-anchor="middle" font-size="9" fill="#7c2d12">68.1</text>
+    <!-- VDPPO 97.9: h=227.4≈227,y=55 -->
+    <rect x="339" y="55"  width="28" height="227" fill="#16a34a" rx="3"/>
+    <text x="353" y="51"  text-anchor="middle" font-size="9" fill="#14532d">97.9</text>
+    <text x="307" y="300" text-anchor="middle" font-size="12" fill="#374151" font-weight="bold">Mixed</text>
+
+    <!-- GROUP 3 — Bottleneck -->
+    <!-- PPO 97.8 -->
+    <rect x="398" y="55"  width="28" height="227" fill="#60a5fa" rx="3"/>
+    <text x="412" y="51"  text-anchor="middle" font-size="9" fill="#1e40af">97.8</text>
+    <!-- IPPO 67.5: h=45,y=237 -->
+    <rect x="430" y="237" width="28" height="45"  fill="#f59e0b" rx="3"/>
+    <text x="444" y="233" text-anchor="middle" font-size="9" fill="#78350f">67.5</text>
+    <!-- MAPPO 97.9 -->
+    <rect x="462" y="55"  width="28" height="227" fill="#f97316" rx="3"/>
+    <text x="476" y="51"  text-anchor="middle" font-size="9" fill="#7c2d12">97.9</text>
+    <!-- VDPPO 97.6: h=225.6≈226,y=56 -->
+    <rect x="494" y="56"  width="28" height="226" fill="#16a34a" rx="3"/>
+    <text x="508" y="52"  text-anchor="middle" font-size="9" fill="#14532d">97.6</text>
+    <text x="462" y="300" text-anchor="middle" font-size="12" fill="#374151" font-weight="bold">Bottleneck</text>
+
+    <!-- GROUP 4 — TB -->
+    <!-- PPO 96.7: h=219.7≈220,y=62 -->
+    <rect x="553" y="62"  width="28" height="220" fill="#60a5fa" rx="3"/>
+    <text x="567" y="58"  text-anchor="middle" font-size="9" fill="#1e40af">96.7</text>
+    <!-- IPPO 69.6: h=57.6≈58,y=224 -->
+    <rect x="585" y="224" width="28" height="58"  fill="#f59e0b" rx="3"/>
+    <text x="599" y="220" text-anchor="middle" font-size="9" fill="#78350f">69.6</text>
+    <!-- MAPPO 87.2: h=163.2≈163,y=119 -->
+    <rect x="617" y="119" width="28" height="163" fill="#f97316" rx="3"/>
+    <text x="631" y="115" text-anchor="middle" font-size="9" fill="#7c2d12">87.2</text>
+    <!-- VDPPO 97.8 -->
+    <rect x="649" y="55"  width="28" height="227" fill="#16a34a" rx="3"/>
+    <text x="663" y="51"  text-anchor="middle" font-size="9" fill="#14532d">97.8</text>
+    <text x="617" y="300" text-anchor="middle" font-size="12" fill="#374151" font-weight="bold">Trung bình</text>
+
+    <!-- Legend -->
+    <rect x="88"  y="318" width="14" height="10" fill="#60a5fa" rx="2"/>
+    <text x="106" y="327" font-size="11" fill="#374151">PPO (1 UAV)</text>
+    <rect x="215" y="318" width="14" height="10" fill="#f59e0b" rx="2"/>
+    <text x="233" y="327" font-size="11" fill="#374151">IPPO</text>
+    <rect x="295" y="318" width="14" height="10" fill="#f97316" rx="2"/>
+    <text x="313" y="327" font-size="11" fill="#374151">MAPPO</text>
+    <rect x="390" y="318" width="14" height="10" fill="#16a34a" rx="2"/>
+    <text x="408" y="327" font-size="11" fill="#374151">VDPPO ★</text>
+    <text x="520" y="327" font-size="10" fill="#6b7280">* Trục Y bắt đầu từ 60% để thấy rõ chênh lệch</text>
+  </svg>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════
+     SLIDE 11 — COORDINATION GAP
+═══════════════════════════════════════════════════════════ -->
+<section>
+  <h2>Phân tích IPPO — Coordination Gap</h2>
+  <div class="cols2" style="margin-top:.6em;">
+    <div>
+      <table style="font-size:.76em;">
+        <tr><th>Metric</th><th>Giá trị</th></tr>
+        <tr><td>Agent 0 — đánh giá riêng lẻ</td><td class="tc-g">~91%</td></tr>
+        <tr><td>Agent 1 — đánh giá riêng lẻ</td><td class="tc-g">~91%</td></tr>
+        <tr><td>Joint — đánh giá kết hợp</td><td class="tc-r">69.6%</td></tr>
+        <tr style="font-weight:700;background:#fee2e2;">
+          <td>Coordination Gap</td><td class="tc-r">≈ 22%</td>
+        </tr>
+      </table>
+      <div class="box box-r" style="font-size:.74em;margin-top:.5em;">
+        <strong>Nguyên nhân:</strong> Mỗi agent học chiến lược tốt cho <em>riêng mình</em> nhưng không biết agent kia đang ở đâu → Đi vào cùng vùng → Lãng phí coverage
+      </div>
+      <div class="box box-g" style="font-size:.74em;margin-top:.4em;">
+        <strong>VDPPO giải quyết:</strong> Diversity Reward phạt khi 2 UAV ở gần nhau (Manhattan ≤ 2), thưởng khi phân tán
+      </div>
+    </div>
+    <div>
+      <div class="codeblock" style="font-size:.65em;">
+<span class="cm"># Coordination Gap — minh hoạ:</span>
+
+Round 1: Agent0 → vùng trái
+         Agent1 → vùng trái  ← TRÙNG!
+
+Round 2: Agent0 → vùng phải
+         Agent1 → vùng phải ← TRÙNG!
+
+<span class="cm"># Kết quả:</span>
+Agent0 tự đánh giá : 91%  (tốt)
+Agent1 tự đánh giá : 91%  (tốt)
+Joint coverage     : 69%  (kém)
+                     ↑
+            GAP = 22%
+
+<span class="str"># IPPO không có cơ chế phối hợp</span>
+<span class="str"># → không phân vùng được</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════
+     SLIDE 12 — MAPPO THẤT BẠI
+═══════════════════════════════════════════════════════════ -->
+<section>
+  <h2>Phân tích MAPPO — Thất bại trên Mixed</h2>
+  <div class="cols2" style="margin-top:.5em;">
+    <div>
+      <div class="box box-a" style="font-size:.78em;">
+        <strong>Map Mixed: MAPPO chỉ đạt 68.1%</strong><br>
+        Hành lang ngang buộc 2 UAV phải phân vùng rõ ràng — trái/phải hoặc trên/dưới
+      </div>
+      <strong style="font-size:.8em;">Nguyên nhân cốt lõi:</strong>
+      <ul style="font-size:.73em;margin-top:.3em;">
+        <li><strong>SharedActor</strong> → cùng policy cho cả 2 UAV → cùng "muốn" đi vào cùng vùng</li>
+        <li><strong>V_team</strong> không biết agent nào chịu trách nhiệm vùng nào</li>
+        <li>Không có <strong>per-agent credit</strong> → không có động lực phân vùng</li>
+        <li>MAPPO hội tụ nhưng <em>hội tụ vào điểm xấu</em></li>
+      </ul>
+      <div class="box box-g" style="font-size:.74em;margin-top:.5em;">
+        <strong>VDPPO giải quyết:</strong><br>
+        V_agent_i → mỗi agent có "value" riêng → gradient cá nhân → tự phân vùng
+      </div>
+    </div>
+    <div>
+      <table style="font-size:.74em;">
+        <tr><th>Map</th><th>MAPPO</th><th>VDPPO</th><th>Δ</th></tr>
+        <tr><td>Simple</td><td>95.7%</td><td class="tc-g">97.8%</td><td class="tc-g">+2.1%</td></tr>
+        <tr style="background:#fee2e2;">
+          <td><strong>Mixed ★</strong></td>
+          <td class="tc-r"><strong>68.1%</strong></td>
+          <td class="tc-g"><strong>97.9%</strong></td>
+          <td class="tc-g"><strong>+29.8%</strong></td>
+        </tr>
+        <tr><td>Bottleneck</td><td>97.9%</td><td class="tc-g">97.6%</td><td style="color:var(--gray);">−0.3%</td></tr>
+        <tr style="font-weight:700;"><td>TB</td><td class="tc-r">87.2%</td><td class="tc-g">97.8%</td><td class="tc-g">+10.6%</td></tr>
+        <tr><td>Std (last 5)</td><td class="tc-r">±4.5%</td><td class="tc-g">±0.31%</td><td class="tc-g">14.5×↓</td></tr>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════
+     SLIDE 13 — CONVERGENCE LINE CHART
+═══════════════════════════════════════════════════════════ -->
+<section>
+  <h2>Phân tích VDPPO — Đường hội tụ</h2>
+  <!-- X: updates 0-260, width=610 (x:65→675), scale=610/260=2.346px/update -->
+  <!-- Y: coverage 0-100%, height=200 (y:30→230), scale=2.0px/% -->
+  <!-- y_pixel = 230 - coverage*2.0 -->
+  <svg viewBox="0 0 720 275" style="width:100%;max-height:250px;" xmlns="http://www.w3.org/2000/svg">
+    <rect width="720" height="275" fill="#fafafa" rx="8"/>
+    <!-- Axes -->
+    <line x1="65" y1="30"  x2="65"  y2="232" stroke="#374151" stroke-width="2"/>
+    <line x1="65" y1="232" x2="680" y2="232" stroke="#374151" stroke-width="2"/>
+    <!-- Y grid -->
+    <line x1="65" y1="232" x2="680" y2="232" stroke="#e5e7eb" stroke-dasharray="3,4"/>
+    <text x="57" y="236" text-anchor="end" font-size="10" fill="#6b7280">0</text>
+    <line x1="65" y1="192" x2="680" y2="192" stroke="#e5e7eb" stroke-dasharray="3,4"/>
+    <text x="57" y="196" text-anchor="end" font-size="10" fill="#6b7280">20%</text>
+    <line x1="65" y1="152" x2="680" y2="152" stroke="#e5e7eb" stroke-dasharray="3,4"/>
+    <text x="57" y="156" text-anchor="end" font-size="10" fill="#6b7280">40%</text>
+    <line x1="65" y1="112" x2="680" y2="112" stroke="#e5e7eb" stroke-dasharray="3,4"/>
+    <text x="57" y="116" text-anchor="end" font-size="10" fill="#6b7280">60%</text>
+    <line x1="65" y1="72"  x2="680" y2="72"  stroke="#e5e7eb" stroke-dasharray="3,4"/>
+    <text x="57" y="76"   text-anchor="end" font-size="10" fill="#6b7280">80%</text>
+    <line x1="65" y1="32"  x2="680" y2="32"  stroke="#e5e7eb" stroke-dasharray="3,4"/>
+    <text x="57" y="36"   text-anchor="end" font-size="10" fill="#6b7280">100%</text>
+    <!-- X labels -->
+    <text x="65"  y="248" text-anchor="middle" font-size="10" fill="#6b7280">0</text>
+    <text x="182" y="248" text-anchor="middle" font-size="10" fill="#6b7280">50</text>
+    <text x="300" y="248" text-anchor="middle" font-size="10" fill="#6b7280">100</text>
+    <text x="417" y="248" text-anchor="middle" font-size="10" fill="#6b7280">150</text>
+    <text x="535" y="248" text-anchor="middle" font-size="10" fill="#6b7280">200</text>
+    <text x="653" y="248" text-anchor="middle" font-size="10" fill="#6b7280">250</text>
+    <text x="372" y="265" text-anchor="middle" font-size="11" fill="#374151" font-weight="bold">Update (lần cập nhật tham số)</text>
+    <text x="10"  y="130" text-anchor="middle" font-size="11" fill="#374151" font-weight="bold" transform="rotate(-90,10,130)">Coverage (%)</text>
+
+    <!-- MAPPO approximate (dashed orange) -->
+    <!-- pts: (1,13.76)→(62,204), (20,32.19)→(112,168), (30,71)→(135,88), (100,82)→(300,68), (200,85)→(535,62), (260,85)→(675,62) -->
+    <polyline points="62,204 112,168 135,88 300,68 535,62 675,62"
+      fill="none" stroke="#f97316" stroke-width="2" stroke-dasharray="8,5" stroke-linejoin="round"/>
+
+    <!-- VDPPO line (solid green) -->
+    <!-- x=65+update*2.346, y=230-cov*2.0 -->
+    <!-- (1,10.7):  x=67,  y=209 -->
+    <!-- (10,26.9): x=88,  y=176 -->
+    <!-- (20,60.0): x=112, y=110 -->
+    <!-- (30,86.5): x=135, y=57  -->
+    <!-- (60,93.2): x=206, y=44  -->
+    <!-- (70,94.7): x=229, y=41  -->
+    <!-- (120,97):  x=347, y=36  -->
+    <!-- (210,97.5):x=558, y=35  -->
+    <!-- (260,97.7):x=675, y=35  -->
+    <polyline points="67,209 88,176 112,110 135,57 206,44 229,41 347,36 558,35 675,35"
+      fill="none" stroke="#16a34a" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
+
+    <!-- VDPPO data points -->
+    <circle cx="67"  cy="209" r="4" fill="#16a34a"/>
+    <circle cx="88"  cy="176" r="4" fill="#16a34a"/>
+    <circle cx="112" cy="110" r="4" fill="#16a34a"/>
+    <circle cx="135" cy="57"  r="4" fill="#16a34a"/>
+    <circle cx="206" cy="44"  r="4" fill="#16a34a"/>
+    <circle cx="347" cy="36"  r="4" fill="#16a34a"/>
+    <circle cx="558" cy="35"  r="4" fill="#16a34a"/>
+
+    <!-- Convergence annotation at update~120 -->
+    <line x1="347" y1="30" x2="347" y2="232" stroke="#16a34a" stroke-width="1" stroke-dasharray="4,4" opacity=".5"/>
+    <text x="352" y="48" font-size="10" fill="#16a34a" font-weight="bold">Hội tụ ~Update 120</text>
+    <text x="352" y="60" font-size="10" fill="#16a34a">≥ 97% coverage</text>
+
+    <!-- 97.8% reference line: y=230-97.8*2=34.4≈34 -->
+    <line x1="65" y1="34" x2="680" y2="34" stroke="#16a34a" stroke-width="1" stroke-dasharray="2,5" opacity=".35"/>
+    <text x="682" y="38" font-size="9" fill="#16a34a">97.8%</text>
+
+    <!-- Legend -->
+    <line x1="85"  y1="18" x2="110" y2="18" stroke="#16a34a" stroke-width="3"/>
+    <circle cx="97" cy="18" r="3" fill="#16a34a"/>
+    <text x="115" y="22" font-size="11" fill="#16a34a">VDPPO (97.8% ± 0.31%)</text>
+    <line x1="310" y1="18" x2="335" y2="18" stroke="#f97316" stroke-width="2" stroke-dasharray="8,5"/>
+    <text x="340" y="22" font-size="11" fill="#f97316">MAPPO (~87.2% ± 4.5%)</text>
+  </svg>
+  <p style="text-align:center;font-size:.6em;color:var(--gray);margin-top:.2em;">
+    VDPPO hội tụ nhanh (update ~30 đạt 86%) và ổn định (std 0.31%) — MAPPO dao động mạnh giai đoạn sau
+  </p>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════
+     SECTION SEPARATOR 5
+═══════════════════════════════════════════════════════════ -->
+<section data-background-color="#1e3a5f" style="text-align:center;">
+  <p style="color:rgba(255,255,255,.5);font-size:.7em;margin-bottom:.3em;">Phần 5</p>
+  <h2 style="color:#fff;border-bottom:3px solid var(--sky);display:inline-block;padding-bottom:.2em;">Kết luận &amp; Hướng phát triển</h2>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════
+     SLIDE 14 — KẾT LUẬN
+═══════════════════════════════════════════════════════════ -->
+<section>
+  <h2>Kết luận &amp; Đóng góp chính</h2>
+  <div class="cols2" style="margin-top:.5em;">
+    <div>
+      <strong style="font-size:.82em;color:var(--green);">Đóng góp của đề tài:</strong>
+      <ul style="font-size:.74em;margin-top:.3em;">
+        <li>Thiết kế môi trường UAV đa tác tử với BFS frontier, 3 loại va chạm, reward 14 thành phần</li>
+        <li>Đề xuất <strong>VDPPO</strong> = MAPPO + Value Decomposition + Adaptive Entropy + Diversity Reward</li>
+        <li>VDPPO đạt <strong>97.8% coverage TB</strong> — vượt PPO đơn tác tử (96.7%) với chỉ 3.5M bước</li>
+        <li>Phân tích định lượng <strong>Coordination Gap 22%</strong> — nguyên nhân thất bại IPPO</li>
+        <li>Xác định và giải thích nguyên nhân MAPPO thất bại trên Mixed (+29.8% khi dùng VDPPO)</li>
+      </ul>
+    </div>
+    <div>
+      <strong style="font-size:.82em;color:var(--amber);">Hạn chế:</strong>
+      <ul style="font-size:.74em;margin-top:.3em;">
+        <li>Môi trường 2D grid — chưa mô phỏng không gian 3D thực tế</li>
+        <li>Mới kiểm nghiệm với 2 UAV — chưa đánh giá scalability</li>
+        <li>Chưa xét ràng buộc thực tế: pin, gió, tín hiệu GPS</li>
+      </ul>
+      <strong style="font-size:.82em;color:var(--blue);display:block;margin-top:.6em;">Hướng phát triển:</strong>
+      <ul style="font-size:.74em;margin-top:.3em;">
+        <li>Môi trường 3D (PX4 / Gazebo simulator)</li>
+        <li>Mở rộng N &gt; 2 UAV, kiến trúc scalable</li>
+        <li>Communication-aware MARL (CommNet, QMIX)</li>
+        <li>Thử nghiệm thực tế trên phần cứng UAV</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════
+     SLIDE 15 — TÀI LIỆU THAM KHẢO
+═══════════════════════════════════════════════════════════ -->
+<section>
+  <h2>Tài liệu tham khảo</h2>
+  <table style="margin-top:.5em;font-size:.64em;">
+    <tr><th>#</th><th>Tác giả</th><th>Tiêu đề</th><th>Năm</th><th>Nguồn</th></tr>
+    <tr><td>[1]</td><td>Schulman et al.</td><td>Proximal Policy Optimization Algorithms</td><td>2017</td><td>arXiv:1707.06347</td></tr>
+    <tr><td>[2]</td><td>Yu et al.</td><td>The Surprising Effectiveness of MAPPO in Cooperative MARL</td><td>2022</td><td>arXiv:2103.01955</td></tr>
+    <tr><td>[3]</td><td>Sunehag et al.</td><td>Value-Decomposition Networks For Cooperative MARL</td><td>2018</td><td>arXiv:1706.05296</td></tr>
+    <tr><td>[4]</td><td>Rashid et al.</td><td>QMIX: Monotonic Value Function Factorisation</td><td>2018</td><td>arXiv:1803.11485</td></tr>
+    <tr><td>[5]</td><td>Lowe et al.</td><td>Multi-Agent Actor-Critic for Mixed Cooperative-Competitive Environments</td><td>2017</td><td>arXiv:1706.02275</td></tr>
+    <tr><td>[6]</td><td>Schulman et al.</td><td>High-Dimensional Continuous Control Using GAE</td><td>2015</td><td>arXiv:1506.02438</td></tr>
+    <tr><td>[7]</td><td>Galceran &amp; Carreras</td><td>A Survey on Coverage Path Planning for Robotics</td><td>2013</td><td>Robotics &amp; Autonomous Systems</td></tr>
+    <tr><td>[8]</td><td>Zhang et al.</td><td>Multi-UAV Cooperative Coverage Using MARL</td><td>2024</td><td>JPCS 2833:012017</td></tr>
+    <tr><td>[9]</td><td>Oliehoek &amp; Amato</td><td>A Concise Introduction to Decentralized POMDPs</td><td>2016</td><td>Springer</td></tr>
+  </table>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════
+     SLIDE 16 — CẢM ƠN / Q&A
+═══════════════════════════════════════════════════════════ -->
+<section data-background-gradient="linear-gradient(135deg,#1e3a5f 0%,#1d4ed8 65%,#0ea5e9 100%)" style="text-align:center;">
+  <h2 style="color:#fff;font-size:1.6em;border:none;margin-top:.8em;">Xin trân trọng cảm ơn!</h2>
+  <p style="color:rgba(255,255,255,.85);font-size:.8em;margin:.4em 0 1.4em;">Kính mời Hội đồng đặt câu hỏi</p>
+  <div style="background:rgba(255,255,255,.15);border-radius:10px;padding:.8em 1.2em;display:inline-block;font-size:.68em;color:#fff;text-align:left;min-width:60%;">
+    <div class="cols2" style="gap:1em;">
+      <div>
+        <strong>Kết quả nổi bật:</strong><br>
+        VDPPO: <strong>97.8%</strong> TB (±0.31%)<br>
+        MAPPO: 87.2% TB (±4.5%)<br>
+        IPPO: 69.6% — Gap 22%<br>
+        Hội tụ tại update ~120
+      </div>
+      <div>
+        <strong>Thông tin:</strong><br>
+        Lê Đức Chiến — 2251172253<br>
+        64KTPM3 — Đại học Thuỷ Lợi<br>
+        Tháng 6, 2026<br>
+        <span style="font-size:.9em;opacity:.8;">github.com/chienday/uav-marl-patrol</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+</div></div><!-- /.slides /.reveal -->
+
+<script src="https://cdn.jsdelivr.net/npm/reveal.js@4.6.0/dist/reveal.js"></script>
+<script>
+Reveal.initialize({
+  hash: true,
+  slideNumber: 'c/t',
+  progress: true,
+  controls: true,
+  controlsTutorial: false,
+  center: true,
+  transition: 'slide',
+  transitionSpeed: 'fast',
+  width: 1280,
+  height: 720,
+  margin: 0.04,
+  minScale: 0.2,
+  maxScale: 2.0,
+});
+</script>
+</body>
+</html>
